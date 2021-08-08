@@ -1,0 +1,657 @@
+$comment
+	File created using the following command:
+		vcd file Projeto_1.msim.vcd -direction
+$end
+$date
+	Sat Aug 07 21:37:07 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module main_vhd_vec_tst $end
+$var wire 1 ! clock_1 $end
+$var wire 1 " RESULT_ULA [3] $end
+$var wire 1 # RESULT_ULA [2] $end
+$var wire 1 $ RESULT_ULA [1] $end
+$var wire 1 % RESULT_ULA [0] $end
+$var wire 1 & sW [2] $end
+$var wire 1 ' sW [1] $end
+$var wire 1 ( sW [0] $end
+
+$scope module i1 $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var wire 1 , devoe $end
+$var wire 1 - devclrn $end
+$var wire 1 . devpor $end
+$var wire 1 / ww_devoe $end
+$var wire 1 0 ww_devclrn $end
+$var wire 1 1 ww_devpor $end
+$var wire 1 2 ww_clock_1 $end
+$var wire 1 3 ww_sW [2] $end
+$var wire 1 4 ww_sW [1] $end
+$var wire 1 5 ww_sW [0] $end
+$var wire 1 6 ww_RESULT_ULA [3] $end
+$var wire 1 7 ww_RESULT_ULA [2] $end
+$var wire 1 8 ww_RESULT_ULA [1] $end
+$var wire 1 9 ww_RESULT_ULA [0] $end
+$var wire 1 : \clock_1~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 ; \clock_1~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 < \clock_1~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 = \clock_1~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 > \RESULT_ULA[0]~output_o\ $end
+$var wire 1 ? \RESULT_ULA[1]~output_o\ $end
+$var wire 1 @ \RESULT_ULA[2]~output_o\ $end
+$var wire 1 A \RESULT_ULA[3]~output_o\ $end
+$var wire 1 B \sW[1]~input_o\ $end
+$var wire 1 C \clock_1~input_o\ $end
+$var wire 1 D \clock_1~inputclkctrl_outclk\ $end
+$var wire 1 E \auto_clock|Add1~0_combout\ $end
+$var wire 1 F \auto_clock|count~1_combout\ $end
+$var wire 1 G \auto_clock|Add1~1\ $end
+$var wire 1 H \auto_clock|Add1~2_combout\ $end
+$var wire 1 I \auto_clock|count~0_combout\ $end
+$var wire 1 J \auto_clock|Add1~3\ $end
+$var wire 1 K \auto_clock|Add1~4_combout\ $end
+$var wire 1 L \auto_clock|Add1~5\ $end
+$var wire 1 M \auto_clock|Add1~6_combout\ $end
+$var wire 1 N \auto_clock|Add1~7\ $end
+$var wire 1 O \auto_clock|Add1~8_combout\ $end
+$var wire 1 P \auto_clock|Add1~9\ $end
+$var wire 1 Q \auto_clock|Add1~10_combout\ $end
+$var wire 1 R \auto_clock|Add1~11\ $end
+$var wire 1 S \auto_clock|Add1~12_combout\ $end
+$var wire 1 T \auto_clock|Add1~13\ $end
+$var wire 1 U \auto_clock|Add1~14_combout\ $end
+$var wire 1 V \auto_clock|Add1~15\ $end
+$var wire 1 W \auto_clock|Add1~16_combout\ $end
+$var wire 1 X \auto_clock|Add1~17\ $end
+$var wire 1 Y \auto_clock|Add1~18_combout\ $end
+$var wire 1 Z \auto_clock|Add1~19\ $end
+$var wire 1 [ \auto_clock|Add1~20_combout\ $end
+$var wire 1 \ \auto_clock|Add1~21\ $end
+$var wire 1 ] \auto_clock|Add1~22_combout\ $end
+$var wire 1 ^ \auto_clock|Add1~23\ $end
+$var wire 1 _ \auto_clock|Add1~24_combout\ $end
+$var wire 1 ` \auto_clock|Add1~25\ $end
+$var wire 1 a \auto_clock|Add1~26_combout\ $end
+$var wire 1 b \auto_clock|Add1~27\ $end
+$var wire 1 c \auto_clock|Add1~28_combout\ $end
+$var wire 1 d \auto_clock|Add1~29\ $end
+$var wire 1 e \auto_clock|Add1~30_combout\ $end
+$var wire 1 f \auto_clock|Add1~31\ $end
+$var wire 1 g \auto_clock|Add1~32_combout\ $end
+$var wire 1 h \auto_clock|Add1~33\ $end
+$var wire 1 i \auto_clock|Add1~34_combout\ $end
+$var wire 1 j \auto_clock|Add1~35\ $end
+$var wire 1 k \auto_clock|Add1~36_combout\ $end
+$var wire 1 l \auto_clock|Add1~37\ $end
+$var wire 1 m \auto_clock|Add1~38_combout\ $end
+$var wire 1 n \auto_clock|Add1~39\ $end
+$var wire 1 o \auto_clock|Add1~40_combout\ $end
+$var wire 1 p \auto_clock|Add1~41\ $end
+$var wire 1 q \auto_clock|Add1~42_combout\ $end
+$var wire 1 r \auto_clock|Add1~43\ $end
+$var wire 1 s \auto_clock|Add1~44_combout\ $end
+$var wire 1 t \auto_clock|Add1~45\ $end
+$var wire 1 u \auto_clock|Add1~46_combout\ $end
+$var wire 1 v \auto_clock|Add1~47\ $end
+$var wire 1 w \auto_clock|Add1~48_combout\ $end
+$var wire 1 x \auto_clock|Add1~49\ $end
+$var wire 1 y \auto_clock|Add1~50_combout\ $end
+$var wire 1 z \auto_clock|Add1~51\ $end
+$var wire 1 { \auto_clock|Add1~52_combout\ $end
+$var wire 1 | \auto_clock|Equal0~7_combout\ $end
+$var wire 1 } \auto_clock|Equal0~5_combout\ $end
+$var wire 1 ~ \auto_clock|Equal0~1_combout\ $end
+$var wire 1 !! \auto_clock|Equal0~2_combout\ $end
+$var wire 1 "! \auto_clock|Equal0~0_combout\ $end
+$var wire 1 #! \auto_clock|Equal0~3_combout\ $end
+$var wire 1 $! \auto_clock|Equal0~4_combout\ $end
+$var wire 1 %! \auto_clock|Equal0~6_combout\ $end
+$var wire 1 &! \auto_clock|Equal0~8_combout\ $end
+$var wire 1 '! \auto_clock|vector_aux[0]~21_combout\ $end
+$var wire 1 (! \auto_clock|vector_aux[1]~7_combout\ $end
+$var wire 1 )! \auto_clock|vector_aux[1]~8\ $end
+$var wire 1 *! \auto_clock|vector_aux[2]~9_combout\ $end
+$var wire 1 +! \auto_clock|vector_aux[2]~10\ $end
+$var wire 1 ,! \auto_clock|vector_aux[3]~11_combout\ $end
+$var wire 1 -! \auto_clock|vector_aux[3]~12\ $end
+$var wire 1 .! \auto_clock|vector_aux[4]~13_combout\ $end
+$var wire 1 /! \auto_clock|vector_aux[4]~14\ $end
+$var wire 1 0! \auto_clock|vector_aux[5]~15_combout\ $end
+$var wire 1 1! \auto_clock|vector_aux[5]~16\ $end
+$var wire 1 2! \auto_clock|vector_aux[6]~17_combout\ $end
+$var wire 1 3! \auto_clock|vector_aux[6]~18\ $end
+$var wire 1 4! \auto_clock|vector_aux[7]~19_combout\ $end
+$var wire 1 5! \greater|result[0]~0_combout\ $end
+$var wire 1 6! \greater|result[0]~1_combout\ $end
+$var wire 1 7! \greater|result[0]~2_combout\ $end
+$var wire 1 8! \sW[0]~input_o\ $end
+$var wire 1 9! \lesser|result[0]~0_combout\ $end
+$var wire 1 :! \lesser|result[0]~1_combout\ $end
+$var wire 1 ;! \lesser|result[0]~2_combout\ $end
+$var wire 1 <! \Mux3~0_combout\ $end
+$var wire 1 =! \greater|X[3]~0_combout\ $end
+$var wire 1 >! \Mux3~1_combout\ $end
+$var wire 1 ?! \Mux3~2_combout\ $end
+$var wire 1 @! \Mux3~3_combout\ $end
+$var wire 1 A! \sW[2]~input_o\ $end
+$var wire 1 B! \sum|bit0|HA1|sum~combout\ $end
+$var wire 1 C! \Mux3~4_combout\ $end
+$var wire 1 D! \Mux2~4_combout\ $end
+$var wire 1 E! \Mux2~2_combout\ $end
+$var wire 1 F! \Mux0~0_combout\ $end
+$var wire 1 G! \Mux2~3_combout\ $end
+$var wire 1 H! \sum|bit1|cout~0_combout\ $end
+$var wire 1 I! \sum|bit2|HA2|sum~combout\ $end
+$var wire 1 J! \diff|bit1|cout~combout\ $end
+$var wire 1 K! \Mux1~0_combout\ $end
+$var wire 1 L! \incr|bit1|cout~0_combout\ $end
+$var wire 1 M! \Mux1~2_combout\ $end
+$var wire 1 N! \decr|bit1|cout~combout\ $end
+$var wire 1 O! \decr|bit1_dec|cout~0_combout\ $end
+$var wire 1 P! \decr|bit2_dec|HA2|sum~combout\ $end
+$var wire 1 Q! \Mux1~3_combout\ $end
+$var wire 1 R! \Mux1~1_combout\ $end
+$var wire 1 S! \Mux0~1_combout\ $end
+$var wire 1 T! \Mux0~2_combout\ $end
+$var wire 1 U! \Mux0~3_combout\ $end
+$var wire 1 V! \Mux0~4_combout\ $end
+$var wire 1 W! \Mux0~5_combout\ $end
+$var wire 1 X! \Mux0~6_combout\ $end
+$var wire 1 Y! \sum|bit3|HA2|sum~combout\ $end
+$var wire 1 Z! \Mux0~7_combout\ $end
+$var wire 1 [! \auto_clock|vector_aux\ [7] $end
+$var wire 1 \! \auto_clock|vector_aux\ [6] $end
+$var wire 1 ]! \auto_clock|vector_aux\ [5] $end
+$var wire 1 ^! \auto_clock|vector_aux\ [4] $end
+$var wire 1 _! \auto_clock|vector_aux\ [3] $end
+$var wire 1 `! \auto_clock|vector_aux\ [2] $end
+$var wire 1 a! \auto_clock|vector_aux\ [1] $end
+$var wire 1 b! \auto_clock|vector_aux\ [0] $end
+$var wire 1 c! \auto_clock|count\ [26] $end
+$var wire 1 d! \auto_clock|count\ [25] $end
+$var wire 1 e! \auto_clock|count\ [24] $end
+$var wire 1 f! \auto_clock|count\ [23] $end
+$var wire 1 g! \auto_clock|count\ [22] $end
+$var wire 1 h! \auto_clock|count\ [21] $end
+$var wire 1 i! \auto_clock|count\ [20] $end
+$var wire 1 j! \auto_clock|count\ [19] $end
+$var wire 1 k! \auto_clock|count\ [18] $end
+$var wire 1 l! \auto_clock|count\ [17] $end
+$var wire 1 m! \auto_clock|count\ [16] $end
+$var wire 1 n! \auto_clock|count\ [15] $end
+$var wire 1 o! \auto_clock|count\ [14] $end
+$var wire 1 p! \auto_clock|count\ [13] $end
+$var wire 1 q! \auto_clock|count\ [12] $end
+$var wire 1 r! \auto_clock|count\ [11] $end
+$var wire 1 s! \auto_clock|count\ [10] $end
+$var wire 1 t! \auto_clock|count\ [9] $end
+$var wire 1 u! \auto_clock|count\ [8] $end
+$var wire 1 v! \auto_clock|count\ [7] $end
+$var wire 1 w! \auto_clock|count\ [6] $end
+$var wire 1 x! \auto_clock|count\ [5] $end
+$var wire 1 y! \auto_clock|count\ [4] $end
+$var wire 1 z! \auto_clock|count\ [3] $end
+$var wire 1 {! \auto_clock|count\ [2] $end
+$var wire 1 |! \auto_clock|count\ [1] $end
+$var wire 1 }! \auto_clock|count\ [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0)
+1*
+x+
+1,
+1-
+1.
+1/
+10
+11
+02
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+1F
+0G
+0H
+0I
+1J
+0K
+0L
+0M
+1N
+0O
+0P
+0Q
+1R
+0S
+0T
+0U
+1V
+0W
+0X
+0Y
+1Z
+0[
+0\
+0]
+1^
+0_
+0`
+0a
+1b
+0c
+0d
+0e
+1f
+0g
+0h
+0i
+1j
+0k
+0l
+0m
+1n
+0o
+0p
+0q
+1r
+0s
+0t
+0u
+1v
+0w
+0x
+0y
+1z
+0{
+1|
+1}
+1~
+1!!
+0"!
+1#!
+0$!
+1%!
+0&!
+0'!
+0(!
+0)!
+0*!
+1+!
+0,!
+0-!
+0.!
+1/!
+00!
+01!
+02!
+13!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+1?!
+1@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+1J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0&
+0'
+0(
+03
+04
+05
+06
+07
+08
+09
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+0u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+0|!
+0}!
+1:
+1;
+1<
+0=
+0"
+0#
+0$
+0%
+$end
+#50000
+1!
+12
+1C
+1=
+1D
+1}!
+0E
+1G
+1H
+0F
+1I
+#100000
+0!
+02
+0C
+0=
+0D
+#150000
+1!
+12
+1C
+1=
+1D
+0}!
+1|!
+0H
+0J
+1E
+0G
+1"!
+1$!
+1H
+1J
+1F
+1K
+0I
+0K
+1I
+1&!
+0F
+0I
+1'!
+#200000
+0!
+02
+0C
+0=
+0D
+#250000
+1!
+12
+1C
+1=
+1D
+0|!
+1b!
+0'!
+1(!
+0?!
+1B!
+0J!
+1O!
+0H
+0"!
+0$!
+1P!
+1C!
+0@!
+0&!
+1F
+1'!
+1>
+19
+1%
+#300000
+0!
+02
+0C
+0=
+0D
+#350000
+1!
+12
+1C
+1=
+1D
+1}!
+0E
+1G
+1H
+0F
+1I
+#400000
+0!
+02
+0C
+0=
+0D
+#450000
+1!
+12
+1C
+1=
+1D
+0}!
+1|!
+0H
+0J
+1E
+0G
+1"!
+1$!
+1H
+1J
+1F
+1K
+0I
+0K
+1I
+1&!
+0F
+0I
+0'!
+#500000
+0!
+02
+0C
+0=
+0D
+#550000
+1!
+12
+1C
+1=
+1D
+0|!
+0b!
+1a!
+1<!
+1'!
+19!
+1?!
+0B!
+1D!
+0H
+0"!
+0$!
+1G!
+0C!
+1@!
+0&!
+1F
+0'!
+0>
+1?
+09
+18
+0%
+1$
+#600000
+0!
+02
+0C
+0=
+0D
+#650000
+1!
+12
+1C
+1=
+1D
+1}!
+0E
+1G
+1H
+0F
+1I
+#700000
+0!
+02
+0C
+0=
+0D
+#750000
+1!
+12
+1C
+1=
+1D
+0}!
+1|!
+0H
+0J
+1E
+0G
+1"!
+1$!
+1H
+1J
+1F
+1K
+0I
+0K
+1I
+1&!
+0F
+0I
+1'!
+#800000
+0!
+02
+0C
+0=
+0D
+#850000
+1!
+12
+1C
+1=
+1D
+0|!
+1b!
+0'!
+0(!
+1)!
+0?!
+1B!
+1L!
+0H
+0"!
+0$!
+1C!
+0@!
+1*!
+0&!
+1F
+1'!
+1>
+19
+1%
+#900000
+0!
+02
+0C
+0=
+0D
+#950000
+1!
+12
+1C
+1=
+1D
+1}!
+0E
+1G
+1H
+0F
+1I
+#1000000

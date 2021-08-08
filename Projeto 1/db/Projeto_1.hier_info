@@ -1,0 +1,1052 @@
+|main
+clock_1 => clock:auto_clock.clock_1
+sW[0] => Mux0.IN2
+sW[0] => Mux1.IN2
+sW[0] => Mux2.IN2
+sW[0] => Mux3.IN2
+sW[0] => flagsHandle:flags.selection[0]
+sW[1] => Mux0.IN1
+sW[1] => Mux1.IN1
+sW[1] => Mux2.IN1
+sW[1] => Mux3.IN1
+sW[1] => flagsHandle:flags.selection[1]
+sW[2] => Mux0.IN0
+sW[2] => Mux1.IN0
+sW[2] => Mux2.IN0
+sW[2] => Mux3.IN0
+sW[2] => flagsHandle:flags.selection[2]
+RESULT_ULA[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+RESULT_ULA[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+RESULT_ULA[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+RESULT_ULA[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= flagsHandle:flags.LEDG[0]
+LEDG[1] <= flagsHandle:flags.LEDG[1]
+LEDG[2] <= flagsHandle:flags.LEDG[2]
+LEDG[3] <= flagsHandle:flags.LEDG[3]
+LEDR[0] <= redLedsHandle:redLeds.LEDR[0]
+LEDR[1] <= redLedsHandle:redLeds.LEDR[1]
+LEDR[2] <= redLedsHandle:redLeds.LEDR[2]
+LEDR[3] <= redLedsHandle:redLeds.LEDR[3]
+LEDR[4] <= redLedsHandle:redLeds.LEDR[4]
+LEDR[5] <= redLedsHandle:redLeds.LEDR[5]
+LEDR[6] <= redLedsHandle:redLeds.LEDR[6]
+LEDR[7] <= redLedsHandle:redLeds.LEDR[7]
+LEDR[8] <= redLedsHandle:redLeds.LEDR[8]
+LEDR[9] <= redLedsHandle:redLeds.LEDR[9]
+LEDR[10] <= redLedsHandle:redLeds.LEDR[10]
+LEDR[11] <= redLedsHandle:redLeds.LEDR[11]
+LEDR[12] <= redLedsHandle:redLeds.LEDR[12]
+LEDR[13] <= redLedsHandle:redLeds.LEDR[13]
+LEDR[14] <= redLedsHandle:redLeds.LEDR[14]
+LEDR[15] <= redLedsHandle:redLeds.LEDR[15]
+LEDR[16] <= redLedsHandle:redLeds.LEDR[16]
+LEDR[17] <= redLedsHandle:redLeds.LEDR[17]
+
+
+|main|clock:auto_clock
+clock_1 => vector_aux[0].CLK
+clock_1 => vector_aux[1].CLK
+clock_1 => vector_aux[2].CLK
+clock_1 => vector_aux[3].CLK
+clock_1 => vector_aux[4].CLK
+clock_1 => vector_aux[5].CLK
+clock_1 => vector_aux[6].CLK
+clock_1 => vector_aux[7].CLK
+clock_1 => count[0].CLK
+clock_1 => count[1].CLK
+clock_1 => count[2].CLK
+clock_1 => count[3].CLK
+clock_1 => count[4].CLK
+clock_1 => count[5].CLK
+clock_1 => count[6].CLK
+clock_1 => count[7].CLK
+clock_1 => count[8].CLK
+clock_1 => count[9].CLK
+clock_1 => count[10].CLK
+clock_1 => count[11].CLK
+clock_1 => count[12].CLK
+clock_1 => count[13].CLK
+clock_1 => count[14].CLK
+clock_1 => count[15].CLK
+clock_1 => count[16].CLK
+clock_1 => count[17].CLK
+clock_1 => count[18].CLK
+clock_1 => count[19].CLK
+clock_1 => count[20].CLK
+clock_1 => count[21].CLK
+clock_1 => count[22].CLK
+clock_1 => count[23].CLK
+clock_1 => count[24].CLK
+clock_1 => count[25].CLK
+clock_1 => count[26].CLK
+numberA[0] <= vector_aux[4].DB_MAX_OUTPUT_PORT_TYPE
+numberA[1] <= vector_aux[5].DB_MAX_OUTPUT_PORT_TYPE
+numberA[2] <= vector_aux[6].DB_MAX_OUTPUT_PORT_TYPE
+numberA[3] <= vector_aux[7].DB_MAX_OUTPUT_PORT_TYPE
+numberB[0] <= vector_aux[0].DB_MAX_OUTPUT_PORT_TYPE
+numberB[1] <= vector_aux[1].DB_MAX_OUTPUT_PORT_TYPE
+numberB[2] <= vector_aux[2].DB_MAX_OUTPUT_PORT_TYPE
+numberB[3] <= vector_aux[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum
+A[0] => fullAdder:bit0.a
+A[1] => fullAdder:bit1.a
+A[2] => fullAdder:bit2.a
+A[3] => fullAdder:bit3.a
+B[0] => fullAdder:bit0.b
+B[1] => fullAdder:bit1.b
+B[2] => fullAdder:bit2.b
+B[3] => fullAdder:bit3.b
+result[0] <= fullAdder:bit0.sum
+result[1] <= fullAdder:bit1.sum
+result[2] <= fullAdder:bit2.sum
+result[3] <= fullAdder:bit3.sum
+carry[0] <= fullAdder:bit0.cout
+carry[1] <= fullAdder:bit1.cout
+carry[2] <= fullAdder:bit2.cout
+carry[3] <= fullAdder:bit3.cout
+
+
+|main|sum4bit:sum|fullAdder:bit0
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit0|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit0|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit1
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit1|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit1|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit2
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit2|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit2|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit3
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit3|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sum4bit:sum|fullAdder:bit3|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff
+A[0] => fullAdder:bit0.a
+A[1] => fullAdder:bit1.a
+A[2] => fullAdder:bit2.a
+A[3] => fullAdder:bit3.a
+B[0] => fullAdder:bit0.b
+B[1] => fullAdder:bit1.b
+B[2] => fullAdder:bit2.b
+B[3] => fullAdder:bit3.b
+result[0] <= fullAdder:bit0.sum
+result[1] <= fullAdder:bit1.sum
+result[2] <= fullAdder:bit2.sum
+result[3] <= fullAdder:bit3.sum
+carry[0] <= fullAdder:bit0.cout
+carry[1] <= fullAdder:bit1.cout
+carry[2] <= fullAdder:bit2.cout
+carry[3] <= fullAdder:bit3.cout
+
+
+|main|diff4bit:diff|fullAdder:bit0
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit0|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit0|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit1
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit1|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit1|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit2
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit2|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit2|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit3
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit3|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|diff4bit:diff|fullAdder:bit3|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr
+A[0] => fullAdder:bit0.a
+A[1] => fullAdder:bit1.a
+A[2] => fullAdder:bit2.a
+A[3] => fullAdder:bit3.a
+B[0] => fullAdder:bit0.b
+B[1] => fullAdder:bit1.b
+B[2] => fullAdder:bit2.b
+B[3] => fullAdder:bit3.b
+result[0] <= fullAdder:bit0.sum
+result[1] <= fullAdder:bit1.sum
+result[2] <= fullAdder:bit2.sum
+result[3] <= fullAdder:bit3.sum
+carry[0] <= fullAdder:bit0.cout
+carry[1] <= fullAdder:bit1.cout
+carry[2] <= fullAdder:bit2.cout
+carry[3] <= fullAdder:bit3.cout
+
+
+|main|incr4bit:incr|fullAdder:bit0
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit0|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit0|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit1
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit1|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit1|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit2
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit2|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit2|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit3
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit3|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|incr4bit:incr|fullAdder:bit3|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr
+A[0] => fullAdder:bit0.a
+A[1] => fullAdder:bit1.a
+A[2] => fullAdder:bit2.a
+A[3] => fullAdder:bit3.a
+B[0] => fullAdder:bit0_dec.b
+B[1] => fullAdder:bit1_dec.b
+B[2] => fullAdder:bit2_dec.b
+B[3] => fullAdder:bit3_dec.b
+result[0] <= fullAdder:bit0_dec.sum
+result[1] <= fullAdder:bit1_dec.sum
+result[2] <= fullAdder:bit2_dec.sum
+result[3] <= fullAdder:bit3_dec.sum
+carry[0] <= fullAdder:bit0_dec.cout
+carry[1] <= fullAdder:bit1_dec.cout
+carry[2] <= fullAdder:bit2_dec.cout
+carry[3] <= fullAdder:bit3_dec.cout
+
+
+|main|decr4bit:decr|fullAdder:bit0
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit0|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit0|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit1
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit1|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit1|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit2
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit2|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit2|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit3
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit3|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit3|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit0_dec
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit0_dec|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit0_dec|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit1_dec
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit1_dec|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit1_dec|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit2_dec
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit2_dec|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit2_dec|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit3_dec
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit3_dec|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decr4bit:decr|fullAdder:bit3_dec|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift
+A[0] => fullAdder:bit0.a
+A[1] => fullAdder:bit1.a
+A[2] => fullAdder:bit2.a
+A[3] => fullAdder:bit3.a
+B[0] => fullAdder:bit0.b
+B[1] => fullAdder:bit1.b
+B[2] => fullAdder:bit2.b
+B[3] => fullAdder:bit3.b
+result[0] <= fullAdder:bit0_inc.sum
+result[1] <= fullAdder:bit1_inc.sum
+result[2] <= fullAdder:bit2_inc.sum
+result[3] <= fullAdder:bit3_inc.sum
+carry[0] <= fullAdder:bit0_inc.cout
+carry[1] <= fullAdder:bit1_inc.cout
+carry[2] <= fullAdder:bit2_inc.cout
+carry[3] <= fullAdder:bit3_inc.cout
+
+
+|main|shiftSignal:shift|fullAdder:bit0
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit0|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit0|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit1
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit1|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit1|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit2
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit2|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit2|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit3
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit3|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit3|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit0_inc
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit0_inc|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit0_inc|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit1_inc
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit1_inc|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit1_inc|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit2_inc
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit2_inc|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit2_inc|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit3_inc
+a => halfAdder:HA1.a
+b => halfAdder:HA1.b
+cin => halfAdder:HA2.b
+sum <= halfAdder:HA2.sum
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit3_inc|halfAdder:HA1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shiftSignal:shift|fullAdder:bit3_inc|halfAdder:HA2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|greaterThan:greater
+A[0] => result.IN1
+A[1] => X[1].IN0
+A[1] => result.IN1
+A[2] => X[2].IN0
+A[2] => result.IN1
+A[3] => X[3].IN0
+A[3] => result.IN0
+B[0] => result.IN1
+B[1] => X[1].IN1
+B[1] => result.IN1
+B[2] => X[2].IN1
+B[2] => result.IN1
+B[3] => X[3].IN1
+B[3] => result.IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+
+
+|main|equalTo:equal
+A[0] => result.IN0
+A[1] => result.IN0
+A[2] => result.IN0
+A[3] => result.IN0
+B[0] => result.IN1
+B[1] => result.IN1
+B[2] => result.IN1
+B[3] => result.IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+
+
+|main|lesserThan:lesser
+A[0] => result.IN0
+A[1] => X[1].IN0
+A[1] => result.IN1
+A[2] => X[2].IN0
+A[2] => result.IN0
+A[3] => X[3].IN0
+A[3] => result.IN0
+B[0] => result.IN1
+B[1] => X[1].IN1
+B[1] => result.IN1
+B[2] => X[2].IN1
+B[2] => result.IN1
+B[3] => X[3].IN1
+B[3] => result.IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+
+
+|main|flagsHandle:flags
+A[0] => ~NO_FANOUT~
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => process_0.IN0
+A[3] => process_0.IN1
+A[3] => process_0.IN0
+A[3] => process_0.IN1
+B[0] => Add0.IN7
+B[1] => Add0.IN6
+B[2] => Add0.IN5
+B[3] => process_0.IN1
+B[3] => process_0.IN1
+B[3] => Add0.IN8
+sum_result[0] => Equal1.IN7
+sum_result[1] => Equal1.IN6
+sum_result[2] => Equal1.IN5
+sum_result[3] => process_0.IN1
+sum_result[3] => Equal1.IN4
+sum_result[3] => LEDG.DATAB
+sum_result[3] => process_0.IN1
+sum_carry[0] => ~NO_FANOUT~
+sum_carry[1] => ~NO_FANOUT~
+sum_carry[2] => ~NO_FANOUT~
+sum_carry[3] => LEDG.DATAB
+subtract_result[0] => Equal3.IN7
+subtract_result[1] => Equal3.IN6
+subtract_result[2] => Equal3.IN5
+subtract_result[3] => process_0.IN1
+subtract_result[3] => LEDG.OUTPUTSELECT
+subtract_result[3] => Equal3.IN4
+subtract_result[3] => process_0.IN1
+subtract_carry[0] => ~NO_FANOUT~
+subtract_carry[1] => ~NO_FANOUT~
+subtract_carry[2] => ~NO_FANOUT~
+subtract_carry[3] => LEDG.OUTPUTSELECT
+selection[0] => Equal0.IN5
+selection[0] => Equal2.IN5
+selection[1] => Equal0.IN4
+selection[1] => Equal2.IN4
+selection[2] => Equal0.IN3
+selection[2] => Equal2.IN3
+LEDG[0] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|redLedsHandle:redLeds
+A[0] => LEDR[14].DATAIN
+A[1] => LEDR[15].DATAIN
+A[2] => LEDR[16].DATAIN
+A[3] => LEDR[17].DATAIN
+B[0] => LEDR[7].DATAIN
+B[1] => LEDR[8].DATAIN
+B[2] => LEDR[9].DATAIN
+B[3] => LEDR[10].DATAIN
+result[0] => LEDR[0].DATAIN
+result[1] => LEDR[1].DATAIN
+result[2] => LEDR[2].DATAIN
+result[3] => LEDR[3].DATAIN
+LEDR[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[10] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[15] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[16] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[17] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
