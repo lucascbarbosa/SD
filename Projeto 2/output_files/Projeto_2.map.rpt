@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto_2
-Thu Sep 23 17:07:38 2021
+Thu Sep 23 17:08:41 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Sep 23 17:07:38 2021           ;
+; Analysis & Synthesis Status        ; Failed - Thu Sep 23 17:08:41 2021           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Projeto_2                                   ;
 ; Top-level Entity Name              ; main                                        ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 23 17:07:30 2021
+    Info: Processing started: Thu Sep 23 17:08:30 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto_2 -c Projeto_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -172,13 +172,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file display
 Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
     Info (12022): Found design unit 1: test-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/test.vhd Line: 11
     Info (12023): Found entity 1: test File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/test.vhd Line: 4
-Error (10500): VHDL syntax error at main.vhd(1) near text @ File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 1
-Error (10500): VHDL syntax error at main.vhd(1) near text "@";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 1
-Error (10523): Ignored construct main at main.vhd(8) due to previous errors File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 8
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
+Warning (12125): Using design file main.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: main-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 15
+    Info (12023): Found entity 1: main File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 7
+Error (10482): VHDL error at main.vhd(64): object "discovered_vector" is used but not declared File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 64
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 3 warnings
     Error: Peak virtual memory: 4782 megabytes
-    Error: Processing ended: Thu Sep 23 17:07:38 2021
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:17
+    Error: Processing ended: Thu Sep 23 17:08:41 2021
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:20
 
 

@@ -1,4 +1,3 @@
-@@ -0,0 +1,70 @@
 LIBRARY ieee;
 
 USE ieee.std_logic_1164.ALL;
@@ -15,19 +14,20 @@ END main;
 
 ARCHITECTURE hardware OF main IS
 
-  CONSTANT secret : INTEGER := 1234;
-  SIGNAL current_step : INTEGER RANGE 0 TO 4 := 0;
-  SIGNAL current_number : INTEGER RANGE 0 TO 9;
-  SIGNAL remaining_lives : INTEGER RANGE 0 TO 5 := 5;
+  CONSTANT secret : INTEGER := 1234; -- segredo da forca
+  SIGNAL current_step : INTEGER RANGE 0 TO 4 := 0; -- contabiliza qual dígito está sendo analisado 
+  SIGNAL current_number : INTEGER RANGE 0 TO 9; -- valor do dígito analisado
+  SIGNAL remaining_lives : INTEGER RANGE 0 TO 5 := 5; -- vidas restantes
+  SIGNAL discovered_vector: STD_LOGIC_VECTOR (3 DOWNTO 0); -- vetor armazenando quais digitos foram descobertos
 
-  COMPONENT display IS PORT (
+  COMPONENT display IS PORT ( -- displays dos 4 dígitos
 	secret_password : IN INTEGER RANGE 0 TO 9999;
 	discovered_vector: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	HEX1, HEX2, HEX3, HEX4: OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
     );
   END COMPONENT;
 
-  COMPONENT switches IS PORT (
+  COMPONENT switches IS PORT ( -- chaves seletoras da jogada
 		clock : IN STD_LOGIC;
 		current_number : IN INTEGER RANGE 0 TO 9;
 		current_step : IN INTEGER RANGE 0 TO 4;
