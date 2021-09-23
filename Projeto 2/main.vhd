@@ -15,8 +15,6 @@ END main;
 ARCHITECTURE hardware OF main IS
 
   CONSTANT secret : INTEGER := 1234; -- segredo da forca
-  SIGNAL current_step : INTEGER RANGE 0 TO 4 := 0; -- contabiliza qual dígito está sendo analisado 
-  SIGNAL current_number : INTEGER RANGE 0 TO 9; -- valor do dígito analisado
   SIGNAL remaining_lives : INTEGER RANGE 0 TO 5 := 5; -- vidas restantes
   SIGNAL discovered_vector: STD_LOGIC_VECTOR (3 DOWNTO 0); -- vetor armazenando quais digitos foram descobertos
 
@@ -29,8 +27,7 @@ ARCHITECTURE hardware OF main IS
 
   COMPONENT switches IS PORT ( -- chaves seletoras da jogada
 		clock : IN STD_LOGIC;
-		current_number : IN INTEGER RANGE 0 TO 9;
-		current_step : IN INTEGER RANGE 0 TO 4;
+		secret : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		remaining_lives : IN INTEGER RANGE 0 TO 5;
 		SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		discovered_vector: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -47,7 +44,6 @@ ARCHITECTURE hardware OF main IS
   END COMPONENT;
 
   COMPONENT display_result IS PORT ( -- display com o resultado da partida
-  
 	discovered_vector: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 	remaining_lives : IN INTEGER RANGE 0 TO 5;
 	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
@@ -55,13 +51,6 @@ ARCHITECTURE hardware OF main IS
   END COMPONENT;
 
 BEGIN
-
-  WITH current_step SELECT current_number <= -- seleciona valor do dígito analisado
-    (secret/1000 MOD 10) WHEN 1,
-    (secret/100 MOD 10) WHEN 2,
-    (secret/10 MOD 10) WHEN 3,
-    (secret MOD 10) WHEN 4,
-    0 WHEN OTHERS;
 	 
   disps : display PORT MAP(secret, discovered_vector, HEX1, HEX2, HEX3, HEX4);
   sws : switches PORT MAP(CLOCK_50, current_number, current_step, remaining_lives, SW, discovered_vector, remaining_lives, current_step, discovered_vector);

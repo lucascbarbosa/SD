@@ -1,7 +1,7 @@
 # do Projeto_2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:22:21 on Sep 23,2021
+# Start time: 17:49:28 on Sep 23,2021
 # vcom -work work Projeto_2.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -12,38 +12,36 @@
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
-# -- Compiling entity display
-# -- Compiling architecture structure of display
-# End time: 17:22:21 on Sep 23,2021, Elapsed time: 0:00:00
+# -- Loading package std_logic_arith
+# -- Compiling entity switches
+# -- Compiling architecture structure of switches
+# End time: 17:49:28 on Sep 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:22:21 on Sep 23,2021
-# vcom -work work Waveform20.vwf.vht 
+# Start time: 17:49:28 on Sep 23,2021
+# vcom -work work Waveform22.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity display_vhd_vec_tst
-# -- Compiling architecture display_arch of display_vhd_vec_tst
-# End time: 17:22:22 on Sep 23,2021, Elapsed time: 0:00:01
+# -- Compiling entity switches_vhd_vec_tst
+# -- Compiling architecture switches_arch of switches_vhd_vec_tst
+# End time: 17:49:28 on Sep 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.display_vhd_vec_tst 
-# Start time: 17:22:22 on Sep 23,2021
+# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.switches_vhd_vec_tst 
+# Start time: 17:49:28 on Sep 23,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.display_vhd_vec_tst(display_arch)
+# Loading work.switches_vhd_vec_tst(switches_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.display(structure)
-# Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
-# Loading cycloneive.cycloneive_io_obuf(arch)
-# Loading cycloneive.cycloneive_io_ibuf(arch)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# ** Warning: Design size of 129695 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#33
-# End time: 17:22:22 on Sep 23,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# Loading work.switches(structure)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "secret".
+#    Time: 0 ps  Iteration: 0  Instance: /switches_vhd_vec_tst/i1 File: Projeto_2.vho Line: 84
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 17:49:28 on Sep 23,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

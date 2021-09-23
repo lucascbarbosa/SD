@@ -4,179 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HEX1[0]",
+					"name" : "output_discovered_vector[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[1]",
+					"name" : "output_discovered_vector[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[2]",
+					"name" : "output_discovered_vector[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[3]",
+					"name" : "output_discovered_vector[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[6]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[0]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[1]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[13]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[12]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[11]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[10]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[9]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[8]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[7]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[6]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[5]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[4]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[3]",
-					"strict" : false
-				},
-				{
-					"name" : "secret_password[2]",
-					"strict" : false
-				},
-				{
-					"name" : "discovered_vector[3]",
-					"strict" : false
-				},
-				{
-					"name" : "discovered_vector[2]",
+					"name" : "discovered_vector[0]",
 					"strict" : false
 				},
 				{
@@ -184,7 +28,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "discovered_vector[0]",
+					"name" : "discovered_vector[2]",
+					"strict" : false
+				},
+				{
+					"name" : "discovered_vector[3]",
 					"strict" : false
 				}
 			]

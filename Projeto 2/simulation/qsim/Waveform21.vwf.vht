@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/22/2021 22:45:23"
+-- Generated on "09/23/2021 17:30:32"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          switches
 -- 
@@ -97,7 +97,11 @@ END PROCESS t_prcs_current_number_2;
 -- current_number[1]
 t_prcs_current_number_1: PROCESS
 BEGIN
+	current_number(1) <= '0';
+	WAIT FOR 50000 ps;
 	current_number(1) <= '1';
+	WAIT FOR 130000 ps;
+	current_number(1) <= '0';
 WAIT;
 END PROCESS t_prcs_current_number_1;
 -- current_number[0]
@@ -115,13 +119,17 @@ END PROCESS t_prcs_current_step_2;
 -- current_step[1]
 t_prcs_current_step_1: PROCESS
 BEGIN
-	current_step(1) <= '1';
+	current_step(1) <= '0';
 WAIT;
 END PROCESS t_prcs_current_step_1;
 -- current_step[0]
 t_prcs_current_step_0: PROCESS
 BEGIN
+	current_step(0) <= '0';
+	WAIT FOR 50000 ps;
 	current_step(0) <= '1';
+	WAIT FOR 130000 ps;
+	current_step(0) <= '0';
 WAIT;
 END PROCESS t_prcs_current_step_0;
 -- discovered_vector[3]
@@ -163,7 +171,7 @@ END PROCESS t_prcs_remaining_lives_1;
 -- remaining_lives[0]
 t_prcs_remaining_lives_0: PROCESS
 BEGIN
-	remaining_lives(0) <= '0';
+	remaining_lives(0) <= '1';
 WAIT;
 END PROCESS t_prcs_remaining_lives_0;
 -- SW[9]
