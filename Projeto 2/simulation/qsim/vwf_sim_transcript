@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform21.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform21.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform23.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform23.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,9 +26,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Sep 23 17:28:34 2021
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform21.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform21.vwf.vht"
+    Info: Processing started: Thu Sep 23 18:28:46 2021
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform23.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform23.vwf.vht"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+ector source file when writing test bench files
 
 Completed successfully. 
 
@@ -53,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Sep 23 17:28:35 2021
+    Info: Processing started: Thu Sep 23 18:28:47 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/" Projeto_2 -c Projeto_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Projeto_2.vho in folder "C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Thu Sep 23 17:28:36 2021
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Sep 23 18:28:47 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -82,10 +84,10 @@ Reading pref.tcl
 
 # do Projeto_2.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:37 on Sep 23,2021
-# vcom -work work Projeto_2.vho 
 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:28:48 on Sep 23,2021
+# vcom -work work Projeto_2.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -95,63 +97,53 @@ Reading pref.tcl
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity switches
-# -- Compiling architecture structure of switches
-# End time: 17:28:37 on Sep 23,2021, Elapsed time: 0:00:00
+# -- Compiling entity main
+# -- Compiling architecture structure of main
+# End time: 18:28:48 on Sep 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:37 on Sep 23,2021
-# vcom -work work Waveform21.vwf.vht 
+# Start time: 18:28:48 on Sep 23,2021
+# vcom -work work Waveform23.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity switches_vhd_vec_tst
-# -- Compiling architecture switches_arch of switches_vhd_vec_tst
-# End time: 17:28:37 on Sep 23,2021, Elapsed time: 0:00:00
+# -- Compiling entity main_vhd_vec_tst
+# -- Compiling architecture main_arch of main_vhd_vec_tst
+# End time: 18:28:48 on Sep 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.switches_vhd_vec_tst 
-# Start time: 17:28:37 on Sep 23,2021
+# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.main_vhd_vec_tst 
+# Start time: 18:28:48 on Sep 23,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.switches_vhd_vec_tst(switches_arch)
+# Loading work.main_vhd_vec_tst(main_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.switches(structure)
+# Loading work.main(structure)
 # Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
-# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
-# Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 13114 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#35
+# after#33
 
-# End time: 17:28:37 on Sep 23,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 18:28:49 on Sep 23,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform21.vwf...
+Reading C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform23.vwf...
 
 Reading C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Projeto_2.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Projeto_2_20210923172837.sim.vwf
+Writing the resulting VWF to C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Projeto_2_20210923182849.sim.vwf
 
 Finished VCD to VWF conversion.
 
