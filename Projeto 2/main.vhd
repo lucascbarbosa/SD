@@ -40,13 +40,14 @@ ARCHITECTURE hardware OF main IS
     );
   END COMPONENT;
 
-  COMPONENT lives IS PORT (
-    remaining_lives : IN INTEGER RANGE 0 TO 3 := 3;
-    LEDR : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+  COMPONENT lives IS PORT ( -- vidas restantes
+    remaining_lives : IN INTEGER RANGE 0 TO 5 := 5;
+    LEDR : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
     );
   END COMPONENT;
 
-  COMPONENT display_result IS PORT (
+  COMPONENT display_result IS PORT ( -- display com o resultado da partida
+  
 	discovered_vector: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
 	remaining_lives : IN INTEGER RANGE 0 TO 5;
 	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
@@ -55,13 +56,13 @@ ARCHITECTURE hardware OF main IS
 
 BEGIN
 
-  WITH current_step SELECT current_number <=
+  WITH current_step SELECT current_number <= -- seleciona valor do dígito analisado
     (secret/1000 MOD 10) WHEN 1,
     (secret/100 MOD 10) WHEN 2,
     (secret/10 MOD 10) WHEN 3,
     (secret MOD 10) WHEN 4,
     0 WHEN OTHERS;
-
+	 
   disps : display PORT MAP(secret, discovered_vector, HEX1, HEX2, HEX3, HEX4);
   sws : switches PORT MAP(CLOCK_50, current_number, current_step, remaining_lives, SW, discovered_vector, remaining_lives, current_step, discovered_vector);
   lvs : lives PORT MAP(remaining_lives, LEDR);
