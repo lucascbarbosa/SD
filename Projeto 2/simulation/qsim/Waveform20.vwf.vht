@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/22/2021 22:22:03"
+-- Generated on "09/23/2021 17:22:18"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          switches
+-- Vhdl Test Bench(with test vectors) for design  :          display
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,196 +29,144 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY switches_vhd_vec_tst IS
-END switches_vhd_vec_tst;
-ARCHITECTURE switches_arch OF switches_vhd_vec_tst IS
+ENTITY display_vhd_vec_tst IS
+END display_vhd_vec_tst;
+ARCHITECTURE display_arch OF display_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clock : STD_LOGIC;
-SIGNAL current_number : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL current_step : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL output_current_step : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL output_discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL output_remaining_lives : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL remaining_lives : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
-COMPONENT switches
+SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL secret_password : STD_LOGIC_VECTOR(13 DOWNTO 0);
+COMPONENT display
 	PORT (
-	clock : IN STD_LOGIC;
-	current_number : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	current_step : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 	discovered_vector : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	output_current_step : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-	output_discovered_vector : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	output_remaining_lives : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-	remaining_lives : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
+	HEX1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	secret_password : IN STD_LOGIC_VECTOR(13 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : switches
+	i1 : display
 	PORT MAP (
 -- list connections between master ports and signals
-	clock => clock,
-	current_number => current_number,
-	current_step => current_step,
 	discovered_vector => discovered_vector,
-	output_current_step => output_current_step,
-	output_discovered_vector => output_discovered_vector,
-	output_remaining_lives => output_remaining_lives,
-	remaining_lives => remaining_lives,
-	SW => SW
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	HEX3 => HEX3,
+	HEX4 => HEX4,
+	secret_password => secret_password
 	);
-
--- clock
-t_prcs_clock: PROCESS
-BEGIN
-	clock <= '0';
-WAIT;
-END PROCESS t_prcs_clock;
--- current_number[3]
-t_prcs_current_number_3: PROCESS
-BEGIN
-	current_number(3) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_3;
--- current_number[2]
-t_prcs_current_number_2: PROCESS
-BEGIN
-	current_number(2) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_2;
--- current_number[1]
-t_prcs_current_number_1: PROCESS
-BEGIN
-	current_number(1) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_1;
--- current_number[0]
-t_prcs_current_number_0: PROCESS
-BEGIN
-	current_number(0) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_0;
--- current_step[2]
-t_prcs_current_step_2: PROCESS
-BEGIN
-	current_step(2) <= '0';
-WAIT;
-END PROCESS t_prcs_current_step_2;
--- current_step[1]
-t_prcs_current_step_1: PROCESS
-BEGIN
-	current_step(1) <= '0';
-WAIT;
-END PROCESS t_prcs_current_step_1;
--- current_step[0]
-t_prcs_current_step_0: PROCESS
-BEGIN
-	current_step(0) <= '0';
-WAIT;
-END PROCESS t_prcs_current_step_0;
 -- discovered_vector[3]
 t_prcs_discovered_vector_3: PROCESS
 BEGIN
-	discovered_vector(3) <= '0';
+	discovered_vector(3) <= '1';
 WAIT;
 END PROCESS t_prcs_discovered_vector_3;
 -- discovered_vector[2]
 t_prcs_discovered_vector_2: PROCESS
 BEGIN
-	discovered_vector(2) <= '0';
+	discovered_vector(2) <= '1';
 WAIT;
 END PROCESS t_prcs_discovered_vector_2;
 -- discovered_vector[1]
 t_prcs_discovered_vector_1: PROCESS
 BEGIN
-	discovered_vector(1) <= '0';
+	discovered_vector(1) <= '1';
 WAIT;
 END PROCESS t_prcs_discovered_vector_1;
 -- discovered_vector[0]
 t_prcs_discovered_vector_0: PROCESS
 BEGIN
-	discovered_vector(0) <= '0';
+	discovered_vector(0) <= '1';
 WAIT;
 END PROCESS t_prcs_discovered_vector_0;
--- remaining_lives[2]
-t_prcs_remaining_lives_2: PROCESS
+-- secret_password[13]
+t_prcs_secret_password_13: PROCESS
 BEGIN
-	remaining_lives(2) <= '0';
+	secret_password(13) <= '0';
 WAIT;
-END PROCESS t_prcs_remaining_lives_2;
--- remaining_lives[1]
-t_prcs_remaining_lives_1: PROCESS
+END PROCESS t_prcs_secret_password_13;
+-- secret_password[12]
+t_prcs_secret_password_12: PROCESS
 BEGIN
-	remaining_lives(1) <= '0';
+	secret_password(12) <= '0';
 WAIT;
-END PROCESS t_prcs_remaining_lives_1;
--- remaining_lives[0]
-t_prcs_remaining_lives_0: PROCESS
+END PROCESS t_prcs_secret_password_12;
+-- secret_password[11]
+t_prcs_secret_password_11: PROCESS
 BEGIN
-	remaining_lives(0) <= '0';
+	secret_password(11) <= '0';
 WAIT;
-END PROCESS t_prcs_remaining_lives_0;
--- SW[9]
-t_prcs_SW_9: PROCESS
+END PROCESS t_prcs_secret_password_11;
+-- secret_password[10]
+t_prcs_secret_password_10: PROCESS
 BEGIN
-	SW(9) <= '0';
+	secret_password(10) <= '1';
 WAIT;
-END PROCESS t_prcs_SW_9;
--- SW[8]
-t_prcs_SW_8: PROCESS
+END PROCESS t_prcs_secret_password_10;
+-- secret_password[9]
+t_prcs_secret_password_9: PROCESS
 BEGIN
-	SW(8) <= '0';
+	secret_password(9) <= '0';
 WAIT;
-END PROCESS t_prcs_SW_8;
--- SW[7]
-t_prcs_SW_7: PROCESS
+END PROCESS t_prcs_secret_password_9;
+-- secret_password[8]
+t_prcs_secret_password_8: PROCESS
 BEGIN
-	SW(7) <= '0';
+	secret_password(8) <= '0';
 WAIT;
-END PROCESS t_prcs_SW_7;
--- SW[6]
-t_prcs_SW_6: PROCESS
+END PROCESS t_prcs_secret_password_8;
+-- secret_password[7]
+t_prcs_secret_password_7: PROCESS
 BEGIN
-	SW(6) <= '0';
+	secret_password(7) <= '1';
 WAIT;
-END PROCESS t_prcs_SW_6;
--- SW[5]
-t_prcs_SW_5: PROCESS
+END PROCESS t_prcs_secret_password_7;
+-- secret_password[6]
+t_prcs_secret_password_6: PROCESS
 BEGIN
-	SW(5) <= '0';
+	secret_password(6) <= '1';
 WAIT;
-END PROCESS t_prcs_SW_5;
--- SW[4]
-t_prcs_SW_4: PROCESS
+END PROCESS t_prcs_secret_password_6;
+-- secret_password[5]
+t_prcs_secret_password_5: PROCESS
 BEGIN
-	SW(4) <= '0';
+	secret_password(5) <= '0';
 WAIT;
-END PROCESS t_prcs_SW_4;
--- SW[3]
-t_prcs_SW_3: PROCESS
+END PROCESS t_prcs_secret_password_5;
+-- secret_password[4]
+t_prcs_secret_password_4: PROCESS
 BEGIN
-	SW(3) <= '0';
+	secret_password(4) <= '1';
 WAIT;
-END PROCESS t_prcs_SW_3;
--- SW[2]
-t_prcs_SW_2: PROCESS
+END PROCESS t_prcs_secret_password_4;
+-- secret_password[3]
+t_prcs_secret_password_3: PROCESS
 BEGIN
-	SW(2) <= '0';
+	secret_password(3) <= '0';
 WAIT;
-END PROCESS t_prcs_SW_2;
--- SW[1]
-t_prcs_SW_1: PROCESS
+END PROCESS t_prcs_secret_password_3;
+-- secret_password[2]
+t_prcs_secret_password_2: PROCESS
 BEGIN
-	SW(1) <= '0';
+	secret_password(2) <= '0';
 WAIT;
-END PROCESS t_prcs_SW_1;
--- SW[0]
-t_prcs_SW_0: PROCESS
+END PROCESS t_prcs_secret_password_2;
+-- secret_password[1]
+t_prcs_secret_password_1: PROCESS
 BEGIN
-	SW(0) <= '0';
+	secret_password(1) <= '1';
 WAIT;
-END PROCESS t_prcs_SW_0;
-END switches_arch;
+END PROCESS t_prcs_secret_password_1;
+-- secret_password[0]
+t_prcs_secret_password_0: PROCESS
+BEGIN
+	secret_password(0) <= '0';
+WAIT;
+END PROCESS t_prcs_secret_password_0;
+END display_arch;
