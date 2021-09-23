@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto_1
-Sat Aug 07 21:41:57 2021
+Wed Sep 22 10:31:43 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Aug 07 21:41:57 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 22 10:31:43 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Projeto_1                                   ;
 ; Top-level Entity Name              ; main                                        ;
@@ -180,26 +180,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------+---------+
-; halfAdder.vhd                    ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/halfAdder.vhd     ;         ;
-; fullAdder.vhd                    ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd     ;         ;
-; sum4bit.vhd                      ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd       ;         ;
-; diff4bit.vhd                     ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/diff4bit.vhd      ;         ;
-; main.vhd                         ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd          ;         ;
-; greaterThan.vhd                  ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/greaterThan.vhd   ;         ;
-; incr4bit.vhd                     ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/incr4bit.vhd      ;         ;
-; decr4bit.vhd                     ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/decr4bit.vhd      ;         ;
-; shiftSignal.vhd                  ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/shiftSignal.vhd   ;         ;
-; lesserThan.vhd                   ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/lesserThan.vhd    ;         ;
-; clock.vhd                        ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/clock.vhd         ;         ;
-; flagsHandle.vhd                  ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/flagsHandle.vhd   ;         ;
-; redLedsHandle.vhd                ; yes             ; User VHDL File        ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/redLedsHandle.vhd ;         ;
-; equalto.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/equalto.vhd       ;         ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------+---------+
+; halfAdder.vhd                    ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/halfAdder.vhd     ;         ;
+; fullAdder.vhd                    ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd     ;         ;
+; sum4bit.vhd                      ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd       ;         ;
+; diff4bit.vhd                     ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/diff4bit.vhd      ;         ;
+; main.vhd                         ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd          ;         ;
+; greaterThan.vhd                  ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/greaterThan.vhd   ;         ;
+; incr4bit.vhd                     ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/incr4bit.vhd      ;         ;
+; decr4bit.vhd                     ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/decr4bit.vhd      ;         ;
+; shiftSignal.vhd                  ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/shiftSignal.vhd   ;         ;
+; lesserThan.vhd                   ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/lesserThan.vhd    ;         ;
+; clock.vhd                        ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/clock.vhd         ;         ;
+; flagsHandle.vhd                  ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/flagsHandle.vhd   ;         ;
+; redLedsHandle.vhd                ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/redLedsHandle.vhd ;         ;
+; equalto.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/equalto.vhd       ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -499,78 +499,81 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Aug 07 21:41:49 2021
+    Info: Processing started: Wed Sep 22 10:31:34 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto_1 -c Projeto_1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file halfadder.vhd
-    Info (12022): Found design unit 1: halfAdder-Behavioral File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/halfAdder.vhd Line: 15
-    Info (12023): Found entity 1: halfAdder File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/halfAdder.vhd Line: 7
+    Info (12022): Found design unit 1: halfAdder-Behavioral File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/halfAdder.vhd Line: 15
+    Info (12023): Found entity 1: halfAdder File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/halfAdder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file fulladder.vhd
-    Info (12022): Found design unit 1: fullAdder-Behavioral File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd Line: 16
-    Info (12023): Found entity 1: fullAdder File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd Line: 7
+    Info (12022): Found design unit 1: fullAdder-Behavioral File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd Line: 16
+    Info (12023): Found entity 1: fullAdder File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file sum4bit.vhd
-    Info (12022): Found design unit 1: sum4bit-hardware File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd Line: 14
-    Info (12023): Found entity 1: sum4bit File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd Line: 6
+    Info (12022): Found design unit 1: sum4bit-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd Line: 14
+    Info (12023): Found entity 1: sum4bit File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file diff4bit.vhd
-    Info (12022): Found design unit 1: diff4bit-hardware File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/diff4bit.vhd Line: 14
-    Info (12023): Found entity 1: diff4bit File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/diff4bit.vhd Line: 6
+    Info (12022): Found design unit 1: diff4bit-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/diff4bit.vhd Line: 14
+    Info (12023): Found entity 1: diff4bit File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/diff4bit.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
-    Info (12022): Found design unit 1: main-hardware File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 16
-    Info (12023): Found entity 1: main File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 7
+    Info (12022): Found design unit 1: main-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 16
+    Info (12023): Found entity 1: main File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file greaterthan.vhd
-    Info (12022): Found design unit 1: greaterThan-behavioral File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/greaterThan.vhd Line: 15
-    Info (12023): Found entity 1: greaterThan File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/greaterThan.vhd Line: 8
+    Info (12022): Found design unit 1: greaterThan-behavioral File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/greaterThan.vhd Line: 15
+    Info (12023): Found entity 1: greaterThan File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/greaterThan.vhd Line: 8
 Warning (12019): Can't analyze file -- file incr.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file incr4bit.vhd
-    Info (12022): Found design unit 1: incr4bit-hardware File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/incr4bit.vhd Line: 14
-    Info (12023): Found entity 1: incr4bit File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/incr4bit.vhd Line: 6
+    Info (12022): Found design unit 1: incr4bit-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/incr4bit.vhd Line: 14
+    Info (12023): Found entity 1: incr4bit File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/incr4bit.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file decr4bit.vhd
-    Info (12022): Found design unit 1: decr4bit-hardware File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/decr4bit.vhd Line: 14
-    Info (12023): Found entity 1: decr4bit File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/decr4bit.vhd Line: 6
+    Info (12022): Found design unit 1: decr4bit-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/decr4bit.vhd Line: 14
+    Info (12023): Found entity 1: decr4bit File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/decr4bit.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file shiftsignal.vhd
-    Info (12022): Found design unit 1: shiftSignal-hardware File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/shiftSignal.vhd Line: 14
-    Info (12023): Found entity 1: shiftSignal File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/shiftSignal.vhd Line: 6
+    Info (12022): Found design unit 1: shiftSignal-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/shiftSignal.vhd Line: 14
+    Info (12023): Found entity 1: shiftSignal File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/shiftSignal.vhd Line: 6
 Warning (12019): Can't analyze file -- file equal_to.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file lesserthan.vhd
-    Info (12022): Found design unit 1: lesserThan-behavioral File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/lesserThan.vhd Line: 15
-    Info (12023): Found entity 1: lesserThan File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/lesserThan.vhd Line: 8
+    Info (12022): Found design unit 1: lesserThan-behavioral File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/lesserThan.vhd Line: 15
+    Info (12023): Found entity 1: lesserThan File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/lesserThan.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
-    Info (12022): Found design unit 1: clock-behav File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/clock.vhd Line: 12
-    Info (12023): Found entity 1: clock File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/clock.vhd Line: 5
+    Info (12022): Found design unit 1: clock-behav File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/clock.vhd Line: 12
+    Info (12023): Found entity 1: clock File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/clock.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file flagshandle.vhd
-    Info (12022): Found design unit 1: flagsHandle-behav File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/flagsHandle.vhd Line: 23
-    Info (12023): Found entity 1: flagsHandle File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/flagsHandle.vhd Line: 11
+    Info (12022): Found design unit 1: flagsHandle-behav File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/flagsHandle.vhd Line: 23
+    Info (12023): Found entity 1: flagsHandle File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/flagsHandle.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file redledshandle.vhd
-    Info (12022): Found design unit 1: redLedsHandle-behav File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/redLedsHandle.vhd Line: 14
-    Info (12023): Found entity 1: redLedsHandle File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/redLedsHandle.vhd Line: 6
+    Info (12022): Found design unit 1: redLedsHandle-behav File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/redLedsHandle.vhd Line: 14
+    Info (12023): Found entity 1: redLedsHandle File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/redLedsHandle.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file disp7seg.vhd
+    Info (12022): Found design unit 1: disp7seg-arch_dec File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/disp7seg.vhd Line: 13
+    Info (12023): Found entity 1: disp7seg File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/disp7seg.vhd Line: 6
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(30): object "incr_carry" assigned a value but never read File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 30
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(33): object "decr_carry" assigned a value but never read File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 33
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(36): object "shift_carry" assigned a value but never read File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 36
-Info (12128): Elaborating entity "clock" for hierarchy "clock:auto_clock" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 141
-Info (12128): Elaborating entity "sum4bit" for hierarchy "sum4bit:sum" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 143
-Info (12128): Elaborating entity "fullAdder" for hierarchy "sum4bit:sum|fullAdder:bit0" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd Line: 32
-Info (12128): Elaborating entity "halfAdder" for hierarchy "sum4bit:sum|fullAdder:bit0|halfAdder:HA1" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd Line: 29
-Info (12128): Elaborating entity "diff4bit" for hierarchy "diff4bit:diff" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 145
-Info (12128): Elaborating entity "incr4bit" for hierarchy "incr4bit:incr" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 147
-Info (12128): Elaborating entity "decr4bit" for hierarchy "decr4bit:decr" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 149
-Info (12128): Elaborating entity "shiftSignal" for hierarchy "shiftSignal:shift" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 151
-Info (12128): Elaborating entity "greaterThan" for hierarchy "greaterThan:greater" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 153
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(30): object "incr_carry" assigned a value but never read File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(33): object "decr_carry" assigned a value but never read File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(36): object "shift_carry" assigned a value but never read File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 36
+Info (12128): Elaborating entity "clock" for hierarchy "clock:auto_clock" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 149
+Info (12128): Elaborating entity "sum4bit" for hierarchy "sum4bit:sum" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 151
+Info (12128): Elaborating entity "fullAdder" for hierarchy "sum4bit:sum|fullAdder:bit0" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/sum4bit.vhd Line: 32
+Info (12128): Elaborating entity "halfAdder" for hierarchy "sum4bit:sum|fullAdder:bit0|halfAdder:HA1" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/fullAdder.vhd Line: 29
+Info (12128): Elaborating entity "diff4bit" for hierarchy "diff4bit:diff" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 153
+Info (12128): Elaborating entity "incr4bit" for hierarchy "incr4bit:incr" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 155
+Info (12128): Elaborating entity "decr4bit" for hierarchy "decr4bit:decr" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 157
+Info (12128): Elaborating entity "shiftSignal" for hierarchy "shiftSignal:shift" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 159
+Info (12128): Elaborating entity "greaterThan" for hierarchy "greaterThan:greater" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 161
 Warning (12125): Using design file equalto.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: equalTo-behavioral File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/equalto.vhd Line: 15
-    Info (12023): Found entity 1: equalTo File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/equalto.vhd Line: 8
-Info (12128): Elaborating entity "equalTo" for hierarchy "equalTo:equal" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 155
-Info (12128): Elaborating entity "lesserThan" for hierarchy "lesserThan:lesser" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 157
-Info (12128): Elaborating entity "flagsHandle" for hierarchy "flagsHandle:flags" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 159
-Info (12128): Elaborating entity "redLedsHandle" for hierarchy "redLedsHandle:redLeds" File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 171
+    Info (12022): Found design unit 1: equalTo-behavioral File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/equalto.vhd Line: 15
+    Info (12023): Found entity 1: equalTo File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/equalto.vhd Line: 8
+Info (12128): Elaborating entity "equalTo" for hierarchy "equalTo:equal" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 163
+Info (12128): Elaborating entity "lesserThan" for hierarchy "lesserThan:lesser" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 165
+Info (12128): Elaborating entity "flagsHandle" for hierarchy "flagsHandle:flags" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 167
+Info (12128): Elaborating entity "redLedsHandle" for hierarchy "redLedsHandle:redLeds" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 179
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -579,9 +582,9 @@ Info (21057): Implemented 131 device resources after synthesis - the final resou
     Info (21059): Implemented 26 output pins
     Info (21061): Implemented 101 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Sat Aug 07 21:41:57 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Wed Sep 22 10:31:43 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
 
 

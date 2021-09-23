@@ -1,5 +1,5 @@
 Fitter report for Projeto_1
-Sat Aug 07 21:42:02 2021
+Wed Sep 22 10:31:48 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Aug 07 21:42:02 2021       ;
+; Fitter Status                      ; Successful - Wed Sep 22 10:31:48 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Projeto_1                                   ;
 ; Top-level Entity Name              ; main                                        ;
@@ -197,7 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/output_files/Projeto_1.pin.
+The pin-out file can be found in C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/output_files/Projeto_1.pin.
 
 
 +--------------------------------------------------------------------+
@@ -1070,7 +1070,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clock_1~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 8
+Info (176353): Automatically promoted node clock_1~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/main.vhd Line: 8
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1101,16 +1101,16 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/output_files/Projeto_1.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (144001): Generated suppressed messages file C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/output_files/Projeto_1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5505 megabytes
-    Info: Processing ended: Sat Aug 07 21:42:02 2021
+    Info: Processing ended: Wed Sep 22 10:31:48 2021
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:05
 
@@ -1118,6 +1118,6 @@ Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/lucas/Documentos/GitHub/SD/Projeto 1/output_files/Projeto_1.fit.smsg.
+The suppressed messages can be found in C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 1/output_files/Projeto_1.fit.smsg.
 
 

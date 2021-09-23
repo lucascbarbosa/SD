@@ -1,0 +1,12 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY test IS PORT(
+	in_test: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	in_idx : IN INTEGER RANGE 0 TO 3;
+	
+
+);
+END test
