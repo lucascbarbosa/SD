@@ -3,7 +3,7 @@ $comment
 		vcd file Projeto_2.msim.vcd -direction
 $end
 $date
-	Thu Sep 23 21:49:43 2021
+	Thu Sep 23 22:53:47 2021
 $end
 $version
 	ModelSim Version 2020.1
@@ -75,50 +75,68 @@ $var wire 1 Y \output_discovered_vector[2]~output_o\ $end
 $var wire 1 Z \output_discovered_vector[3]~output_o\ $end
 $var wire 1 [ \clock~input_o\ $end
 $var wire 1 \ \clock~inputclkctrl_outclk\ $end
-$var wire 1 ] \SW[0]~input_o\ $end
-$var wire 1 ^ \SW[1]~input_o\ $end
+$var wire 1 ] \SW[1]~input_o\ $end
+$var wire 1 ^ \SW[3]~input_o\ $end
 $var wire 1 _ \SW[4]~input_o\ $end
-$var wire 1 ` \SW[2]~input_o\ $end
-$var wire 1 a \SW[5]~input_o\ $end
-$var wire 1 b \SW[3]~input_o\ $end
-$var wire 1 c \discovered~0_combout\ $end
-$var wire 1 d \discovered~1_combout\ $end
-$var wire 1 e \SW[7]~input_o\ $end
-$var wire 1 f \last_SW[7]~feeder_combout\ $end
-$var wire 1 g \SW[8]~input_o\ $end
-$var wire 1 h \last_SW[8]~feeder_combout\ $end
-$var wire 1 i \last_SW[2]~feeder_combout\ $end
-$var wire 1 j \discovered~2_combout\ $end
-$var wire 1 k \SW[9]~input_o\ $end
-$var wire 1 l \last_SW[9]~feeder_combout\ $end
-$var wire 1 m \SW[6]~input_o\ $end
-$var wire 1 n \discovered~3_combout\ $end
-$var wire 1 o \last_SW[4]~feeder_combout\ $end
-$var wire 1 p \last_SW[3]~feeder_combout\ $end
-$var wire 1 q \discovered~4_combout\ $end
-$var wire 1 r \discovered~5_combout\ $end
-$var wire 1 s \discovered~6_combout\ $end
-$var wire 1 t \discovered~q\ $end
-$var wire 1 u \new_discovered_vector[0]~0_combout\ $end
-$var wire 1 v \discovered_vector[0]~input_o\ $end
-$var wire 1 w \output_discovered_vector~0_combout\ $end
-$var wire 1 x \discovered_vector[1]~input_o\ $end
-$var wire 1 y \discovered_vector[2]~input_o\ $end
-$var wire 1 z \discovered_vector[3]~input_o\ $end
-$var wire 1 { new_discovered_vector [3] $end
-$var wire 1 | new_discovered_vector [2] $end
-$var wire 1 } new_discovered_vector [1] $end
-$var wire 1 ~ new_discovered_vector [0] $end
-$var wire 1 !! last_SW [9] $end
-$var wire 1 "! last_SW [8] $end
-$var wire 1 #! last_SW [7] $end
-$var wire 1 $! last_SW [6] $end
-$var wire 1 %! last_SW [5] $end
-$var wire 1 &! last_SW [4] $end
-$var wire 1 '! last_SW [3] $end
-$var wire 1 (! last_SW [2] $end
-$var wire 1 )! last_SW [1] $end
-$var wire 1 *! last_SW [0] $end
+$var wire 1 ` \SW[0]~input_o\ $end
+$var wire 1 a \process_0~2_combout\ $end
+$var wire 1 b \SW[2]~input_o\ $end
+$var wire 1 c \Equal1~2_combout\ $end
+$var wire 1 d \SW[9]~input_o\ $end
+$var wire 1 e \SW[5]~input_o\ $end
+$var wire 1 f \SW[6]~input_o\ $end
+$var wire 1 g \SW[7]~input_o\ $end
+$var wire 1 h \Equal1~0_combout\ $end
+$var wire 1 i \SW[8]~input_o\ $end
+$var wire 1 j \Equal1~1_combout\ $end
+$var wire 1 k \process_0~0_combout\ $end
+$var wire 1 l \last_SW[8]~feeder_combout\ $end
+$var wire 1 m \last_SW[6]~feeder_combout\ $end
+$var wire 1 n \last_SW[5]~feeder_combout\ $end
+$var wire 1 o \process_0~1_combout\ $end
+$var wire 1 p \process_0~3_combout\ $end
+$var wire 1 q \digit[0]~10_combout\ $end
+$var wire 1 r \digit[1]~8_combout\ $end
+$var wire 1 s \digit[2]~9_combout\ $end
+$var wire 1 t \digit[2]~3_combout\ $end
+$var wire 1 u \digit[2]~4_combout\ $end
+$var wire 1 v \digit[2]~5_combout\ $end
+$var wire 1 w \digit[2]~6_combout\ $end
+$var wire 1 x \digit[2]~0_combout\ $end
+$var wire 1 y \digit[2]~1_combout\ $end
+$var wire 1 z \digit[2]~2_combout\ $end
+$var wire 1 { \digit[2]~7_combout\ $end
+$var wire 1 | \discovered~0_combout\ $end
+$var wire 1 } \discovered~q\ $end
+$var wire 1 ~ \discovered_vector[0]~input_o\ $end
+$var wire 1 !! \new_discovered_vector[0]~0_combout\ $end
+$var wire 1 "! \output_discovered_vector~0_combout\ $end
+$var wire 1 #! \discovered_vector[1]~input_o\ $end
+$var wire 1 $! \new_discovered_vector[1]~1_combout\ $end
+$var wire 1 %! \output_discovered_vector~1_combout\ $end
+$var wire 1 &! \discovered_vector[2]~input_o\ $end
+$var wire 1 '! \new_discovered_vector[2]~2_combout\ $end
+$var wire 1 (! \output_discovered_vector~2_combout\ $end
+$var wire 1 )! \discovered_vector[3]~input_o\ $end
+$var wire 1 *! \new_discovered_vector[3]~3_combout\ $end
+$var wire 1 +! \output_discovered_vector~3_combout\ $end
+$var wire 1 ,! new_discovered_vector [3] $end
+$var wire 1 -! new_discovered_vector [2] $end
+$var wire 1 .! new_discovered_vector [1] $end
+$var wire 1 /! new_discovered_vector [0] $end
+$var wire 1 0! last_SW [9] $end
+$var wire 1 1! last_SW [8] $end
+$var wire 1 2! last_SW [7] $end
+$var wire 1 3! last_SW [6] $end
+$var wire 1 4! last_SW [5] $end
+$var wire 1 5! last_SW [4] $end
+$var wire 1 6! last_SW [3] $end
+$var wire 1 7! last_SW [2] $end
+$var wire 1 8! last_SW [1] $end
+$var wire 1 9! last_SW [0] $end
+$var wire 1 :! digit [2] $end
+$var wire 1 ;! digit [1] $end
+$var wire 1 <! digit [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -148,32 +166,47 @@ x7
 0^
 0_
 0`
-0a
+1a
 0b
-0c
+1c
 0d
 0e
 0f
 0g
-0h
+1h
 0i
 1j
 0k
 0l
 0m
-1n
-0o
+0n
+1o
 0p
-1q
-1r
+0q
+0r
 0s
 0t
 0u
 0v
 0w
-0x
+1x
 0y
-1z
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+1)!
+0*!
+1+!
 1"
 0#
 0$
@@ -206,20 +239,23 @@ x7
 0O
 0P
 0Q
-x{
-x|
-x}
-0~
-0!!
-0"!
-0#!
-0$!
-0%!
-0&!
-0'!
-0(!
-0)!
-0*!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
 1R
 1S
 1T
@@ -297,31 +333,16 @@ $end
 1\
 #60000
 0!
-10
 0>
-1D
-1_
 0[
 0U
-1c
-1o
-1d
 0\
-1s
 #65000
 1!
 1>
 1[
 1U
 1\
-1&!
-1t
-1u
-0q
-0r
-1V
-1M
-1&
 #70000
 0!
 0>
@@ -334,23 +355,47 @@ $end
 1[
 1U
 1\
-1~
-1w
-1W
-1Q
-1*
 #80000
 0!
+10
 0>
+1D
+1_
 0[
 0U
+0c
+1u
+1v
+1k
 0\
+1p
+1w
+1{
+1q
+1|
 #85000
 1!
 1>
 1[
 1U
 1\
+15!
+1<!
+1}
+0q
+1r
+0u
+1!!
+0a
+0p
+0v
+1V
+0w
+0{
+1M
+1&
+1q
+0r
 #90000
 0!
 0>
@@ -363,6 +408,11 @@ $end
 1[
 1U
 1\
+1/!
+1"!
+1W
+1Q
+1*
 #100000
 0!
 0>
@@ -449,15 +499,9 @@ $end
 1\
 #170000
 0!
-00
 0>
-0D
-0_
 0[
 0U
-0c
-0o
-0d
 0\
 #175000
 1!
@@ -465,9 +509,6 @@ $end
 1[
 1U
 1\
-0&!
-1q
-1r
 #180000
 0!
 0>
@@ -506,9 +547,14 @@ $end
 1\
 #210000
 0!
+00
 0>
+0D
+0_
 0[
 0U
+1c
+0k
 0\
 #215000
 1!
@@ -516,6 +562,8 @@ $end
 1[
 1U
 1\
+05!
+1a
 #220000
 0!
 0>
@@ -566,16 +614,42 @@ $end
 1\
 #260000
 0!
+11
 0>
+1E
+1^
 0[
 0U
+0c
+1u
+1v
+1k
 0\
+1p
+1w
+1{
+0|
+0q
+1r
+1|
 #265000
 1!
 1>
 1[
 1U
 1\
+16!
+0<!
+1;!
+0v
+1q
+0u
+1$!
+0a
+0p
+0w
+0{
+0q
 #270000
 0!
 0>
@@ -588,6 +662,11 @@ $end
 1[
 1U
 1\
+1.!
+1%!
+1X
+1P
+1)
 #280000
 0!
 0>
@@ -710,9 +789,15 @@ $end
 1\
 #380000
 0!
+01
 0>
+0E
+0^
 0[
 0U
+1c
+1y
+0k
 0\
 #385000
 1!
@@ -720,6 +805,8 @@ $end
 1[
 1U
 1\
+06!
+1a
 #390000
 0!
 0>

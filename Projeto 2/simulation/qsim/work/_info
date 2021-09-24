@@ -190,14 +190,14 @@ R31
 R16
 R17
 Ehard_block
-Z32 w1632444582
+Z32 w1632448425
 R2
 R3
 R4
 R5
 R6
 R7
-!i122 318
+!i122 366
 R0
 R8
 R9
@@ -207,9 +207,9 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 R11
 32
-Z33 !s110 1632444583
+Z33 !s110 1632448426
 !i10b 1
-Z34 !s108 1632444583.000000
+Z34 !s108 1632448426.000000
 R14
 R15
 !i113 1
@@ -223,7 +223,7 @@ R5
 R6
 R7
 DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
-!i122 318
+!i122 366
 l65
 L51 20
 Via>5o7W??azG@W@@eFOTF0
@@ -338,7 +338,7 @@ R4
 R5
 R6
 Z44 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
-!i122 318
+!i122 366
 R0
 R8
 R9
@@ -366,11 +366,11 @@ R5
 R6
 R44
 DEx4 work 8 switches 0 22 <JA`2G5U]D1GP3R7V>aEY2
-!i122 318
-l176
-L113 733
-V1[AfN3Q[PiGE][o2M`3RX1
-!s100 mU^=8UdhGC673dUCQWWW>0
+!i122 366
+l192
+L113 1086
+VfkMRiC[PQMFb<iDQ5M4:a0
+!s100 =1D>iV^C@A@=g63:S<;B32
 R11
 32
 R33
@@ -382,24 +382,24 @@ R15
 R16
 R17
 Eswitches_vhd_vec_tst
-Z45 w1632444581
+R32
 R5
 R6
-!i122 319
+!i122 367
 R0
-Z46 8Waveform5.vwf.vht
-Z47 FWaveform5.vwf.vht
+Z45 8Waveform15.vwf.vht
+Z46 FWaveform15.vwf.vht
 l0
 R21
 VQA_>F_Lj7Q43PV>=CBmf:3
 !s100 om7Ae=8<n_fIS0I9i[bcm1
 R11
 32
-R33
+Z47 !s110 1632448427
 !i10b 1
 R34
-Z48 !s90 -work|work|Waveform5.vwf.vht|
-Z49 !s107 Waveform5.vwf.vht|
+Z48 !s90 -work|work|Waveform15.vwf.vht|
+Z49 !s107 Waveform15.vwf.vht|
 !i113 1
 R16
 R17
@@ -407,14 +407,14 @@ Aswitches_arch
 R5
 R6
 Z50 DEx4 work 20 switches_vhd_vec_tst 0 22 QA_>F_Lj7Q43PV>=CBmf:3
-!i122 319
+!i122 367
 l51
-Z51 L34 128
-V_]6e:9?3j^nQigdIXL5?D2
-!s100 k]4W3cGX;Q3dQ@mYV2[@i3
+Z51 L34 132
+V7a3>WVV7WRV2n<;c7SX=Y2
+!s100 HSgCi>K=a?b8UzhVei6RU3
 R11
 32
-R33
+R47
 !i10b 1
 R34
 R48

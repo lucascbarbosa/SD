@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform5.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform5.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform15.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform15.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Sep 23 21:49:40 2021
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform5.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform5.vwf.vht"
+    Info: Processing started: Thu Sep 23 22:53:44 2021
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Projeto_2 -c Projeto_2 --vector_source="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform15.vwf" --testbench_file="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Waveform15.vwf.vht"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -53,15 +53,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Sep 23 21:49:41 2021
+    Info: Processing started: Thu Sep 23 22:53:45 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/" Projeto_2 -c Projeto_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Projeto_2.vho in folder "C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Thu Sep 23 21:49:42 2021
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Thu Sep 23 22:53:45 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 Completed successfully. 
 
@@ -84,7 +84,7 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:43 on Sep 23,2021
+# Start time: 22:53:46 on Sep 23,2021
 # vcom -work work Projeto_2.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -99,22 +99,22 @@ Reading pref.tcl
 # -- Loading package altera_primitives_components
 # -- Compiling entity switches
 # -- Compiling architecture structure of switches
-
-# End time: 21:49:43 on Sep 23,2021, Elapsed time: 0:00:00
+# End time: 22:53:46 on Sep 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:43 on Sep 23,2021
-# vcom -work work Waveform5.vwf.vht 
+# Start time: 22:53:46 on Sep 23,2021
+# vcom -work work Waveform15.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity switches_vhd_vec_tst
 # -- Compiling architecture switches_arch of switches_vhd_vec_tst
-# End time: 21:49:43 on Sep 23,2021, Elapsed time: 0:00:00
+# End time: 22:53:47 on Sep 23,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.switches_vhd_vec_tst 
-# Start time: 21:49:43 on Sep 23,2021
+# Start time: 22:53:47 on Sep 23,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -136,20 +136,20 @@ Reading pref.tcl
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # after#35
 
-# End time: 21:49:43 on Sep 23,2021, Elapsed time: 0:00:00
+# End time: 22:53:47 on Sep 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform5.vwf...
+Reading C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/Waveform15.vwf...
 
 Reading C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Projeto_2.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Projeto_2_20210923214944.sim.vwf
+Writing the resulting VWF to C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/simulation/qsim/Projeto_2_20210923225347.sim.vwf
 
 Finished VCD to VWF conversion.
 

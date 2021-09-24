@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/23/2021 21:23:18"
+-- Generated on "09/23/2021 22:33:23"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          switches
 -- 
@@ -128,15 +128,19 @@ END PROCESS t_prcs_SW_5;
 t_prcs_SW_4: PROCESS
 BEGIN
 	SW(4) <= '0';
-	WAIT FOR 50000 ps;
+	WAIT FOR 40000 ps;
 	SW(4) <= '1';
-	WAIT FOR 80000 ps;
+	WAIT FOR 60000 ps;
 	SW(4) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_4;
 -- SW[3]
 t_prcs_SW_3: PROCESS
 BEGIN
+	SW(3) <= '0';
+	WAIT FOR 210000 ps;
+	SW(3) <= '1';
+	WAIT FOR 70000 ps;
 	SW(3) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_3;

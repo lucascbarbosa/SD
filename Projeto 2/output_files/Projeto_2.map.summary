@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Sep 23 21:48:27 2021
+Analysis & Synthesis Status : Successful - Thu Sep 23 22:51:41 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Projeto_2
 Top-level Entity Name : switches
 Family : Cyclone IV E
-Total logic elements : 19
-    Total combinational functions : 9
-    Dedicated logic registers : 12
-Total registers : 12
+Total logic elements : 37
+    Total combinational functions : 27
+    Dedicated logic registers : 18
+Total registers : 18
 Total pins : 20
 Total virtual pins : 0
 Total memory bits : 0
