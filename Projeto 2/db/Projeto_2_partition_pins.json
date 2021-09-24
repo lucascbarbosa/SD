@@ -2,7 +2,88 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "output_disc",
+					"strict" : false
+				},
+				{
+					"name" : "output_discovered_vector[0]",
+					"strict" : false
+				},
+				{
+					"name" : "output_discovered_vector[1]",
+					"strict" : false
+				},
+				{
+					"name" : "output_discovered_vector[2]",
+					"strict" : false
+				},
+				{
+					"name" : "output_discovered_vector[3]",
+					"strict" : false
+				},
+				{
+					"name" : "discovered_vector[0]",
+					"strict" : false
+				},
+				{
+					"name" : "discovered_vector[1]",
+					"strict" : false
+				},
+				{
+					"name" : "discovered_vector[2]",
+					"strict" : false
+				},
+				{
+					"name" : "discovered_vector[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

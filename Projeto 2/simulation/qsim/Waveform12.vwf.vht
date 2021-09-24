@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/23/2021 15:55:57"
+-- Generated on "09/23/2021 21:23:18"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          test
+-- Vhdl Test Bench(with test vectors) for design  :          switches
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,66 +29,133 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY test_vhd_vec_tst IS
-END test_vhd_vec_tst;
-ARCHITECTURE test_arch OF test_vhd_vec_tst IS
+ENTITY switches_vhd_vec_tst IS
+END switches_vhd_vec_tst;
+ARCHITECTURE switches_arch OF switches_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL in_idx : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL in_test : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL out_test_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL out_tmp : STD_LOGIC_VECTOR(1 DOWNTO 0);
-COMPONENT test
+SIGNAL clock : STD_LOGIC;
+SIGNAL discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL output_disc : STD_LOGIC;
+SIGNAL output_discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
+COMPONENT switches
 	PORT (
-	in_idx : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	in_test : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	out_test_vector : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	out_tmp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+	clock : IN STD_LOGIC;
+	discovered_vector : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	output_disc : OUT STD_LOGIC;
+	output_discovered_vector : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : test
+	i1 : switches
 	PORT MAP (
 -- list connections between master ports and signals
-	in_idx => in_idx,
-	in_test => in_test,
-	out_test_vector => out_test_vector,
-	out_tmp => out_tmp
+	clock => clock,
+	discovered_vector => discovered_vector,
+	output_disc => output_disc,
+	output_discovered_vector => output_discovered_vector,
+	SW => SW
 	);
--- in_idx[1]
-t_prcs_in_idx_1: PROCESS
+
+-- clock
+t_prcs_clock: PROCESS
 BEGIN
-	in_idx(1) <= '0';
-WAIT;
-END PROCESS t_prcs_in_idx_1;
--- in_idx[0]
-t_prcs_in_idx_0: PROCESS
+LOOP
+	clock <= '0';
+	WAIT FOR 5000 ps;
+	clock <= '1';
+	WAIT FOR 5000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_clock;
+-- discovered_vector[3]
+t_prcs_discovered_vector_3: PROCESS
 BEGIN
-	in_idx(0) <= '0';
+	discovered_vector(3) <= '0';
 WAIT;
-END PROCESS t_prcs_in_idx_0;
--- in_test[3]
-t_prcs_in_test_3: PROCESS
+END PROCESS t_prcs_discovered_vector_3;
+-- discovered_vector[2]
+t_prcs_discovered_vector_2: PROCESS
 BEGIN
-	in_test(3) <= '0';
+	discovered_vector(2) <= '0';
 WAIT;
-END PROCESS t_prcs_in_test_3;
--- in_test[2]
-t_prcs_in_test_2: PROCESS
+END PROCESS t_prcs_discovered_vector_2;
+-- discovered_vector[1]
+t_prcs_discovered_vector_1: PROCESS
 BEGIN
-	in_test(2) <= '0';
+	discovered_vector(1) <= '0';
 WAIT;
-END PROCESS t_prcs_in_test_2;
--- in_test[1]
-t_prcs_in_test_1: PROCESS
+END PROCESS t_prcs_discovered_vector_1;
+-- discovered_vector[0]
+t_prcs_discovered_vector_0: PROCESS
 BEGIN
-	in_test(1) <= '0';
+	discovered_vector(0) <= '0';
 WAIT;
-END PROCESS t_prcs_in_test_1;
--- in_test[0]
-t_prcs_in_test_0: PROCESS
+END PROCESS t_prcs_discovered_vector_0;
+-- SW[9]
+t_prcs_SW_9: PROCESS
 BEGIN
-	in_test(0) <= '0';
+	SW(9) <= '0';
 WAIT;
-END PROCESS t_prcs_in_test_0;
-END test_arch;
+END PROCESS t_prcs_SW_9;
+-- SW[8]
+t_prcs_SW_8: PROCESS
+BEGIN
+	SW(8) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_8;
+-- SW[7]
+t_prcs_SW_7: PROCESS
+BEGIN
+	SW(7) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_7;
+-- SW[6]
+t_prcs_SW_6: PROCESS
+BEGIN
+	SW(6) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_6;
+-- SW[5]
+t_prcs_SW_5: PROCESS
+BEGIN
+	SW(5) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_5;
+-- SW[4]
+t_prcs_SW_4: PROCESS
+BEGIN
+	SW(4) <= '0';
+	WAIT FOR 50000 ps;
+	SW(4) <= '1';
+	WAIT FOR 80000 ps;
+	SW(4) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_4;
+-- SW[3]
+t_prcs_SW_3: PROCESS
+BEGIN
+	SW(3) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_3;
+-- SW[2]
+t_prcs_SW_2: PROCESS
+BEGIN
+	SW(2) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_2;
+-- SW[1]
+t_prcs_SW_1: PROCESS
+BEGIN
+	SW(1) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_1;
+-- SW[0]
+t_prcs_SW_0: PROCESS
+BEGIN
+	SW(0) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_0;
+END switches_arch;
