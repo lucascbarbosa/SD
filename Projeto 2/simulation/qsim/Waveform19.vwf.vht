@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/23/2021 17:15:22"
+-- Generated on "09/23/2021 23:49:51"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          main
+-- Vhdl Test Bench(with test vectors) for design  :          switches
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,56 +29,71 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY main_vhd_vec_tst IS
-END main_vhd_vec_tst;
-ARCHITECTURE main_arch OF main_vhd_vec_tst IS
+ENTITY switches_vhd_vec_tst IS
+END switches_vhd_vec_tst;
+ARCHITECTURE switches_arch OF switches_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL CLOCK_50 : STD_LOGIC;
-SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL LEDR : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL clock : STD_LOGIC;
+SIGNAL discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL output_disc : STD_LOGIC;
+SIGNAL output_discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
-COMPONENT main
+COMPONENT switches
 	PORT (
-	CLOCK_50 : IN STD_LOGIC;
-	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	LEDR : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+	clock : IN STD_LOGIC;
+	discovered_vector : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	output_disc : BUFFER STD_LOGIC;
+	output_discovered_vector : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : main
+	i1 : switches
 	PORT MAP (
 -- list connections between master ports and signals
-	CLOCK_50 => CLOCK_50,
-	HEX0 => HEX0,
-	HEX1 => HEX1,
-	HEX2 => HEX2,
-	HEX3 => HEX3,
-	HEX4 => HEX4,
-	LEDR => LEDR,
+	clock => clock,
+	discovered_vector => discovered_vector,
+	output_disc => output_disc,
+	output_discovered_vector => output_discovered_vector,
 	SW => SW
 	);
 
--- CLOCK_50
-t_prcs_CLOCK_50: PROCESS
+-- clock
+t_prcs_clock: PROCESS
 BEGIN
 LOOP
-	CLOCK_50 <= '0';
-	WAIT FOR 5000 ps;
-	CLOCK_50 <= '1';
-	WAIT FOR 5000 ps;
+	clock <= '0';
+	WAIT FOR 10000 ps;
+	clock <= '1';
+	WAIT FOR 10000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_CLOCK_50;
+END PROCESS t_prcs_clock;
+-- discovered_vector[3]
+t_prcs_discovered_vector_3: PROCESS
+BEGIN
+	discovered_vector(3) <= '0';
+WAIT;
+END PROCESS t_prcs_discovered_vector_3;
+-- discovered_vector[2]
+t_prcs_discovered_vector_2: PROCESS
+BEGIN
+	discovered_vector(2) <= '0';
+WAIT;
+END PROCESS t_prcs_discovered_vector_2;
+-- discovered_vector[1]
+t_prcs_discovered_vector_1: PROCESS
+BEGIN
+	discovered_vector(1) <= '0';
+WAIT;
+END PROCESS t_prcs_discovered_vector_1;
+-- discovered_vector[0]
+t_prcs_discovered_vector_0: PROCESS
+BEGIN
+	discovered_vector(0) <= '0';
+WAIT;
+END PROCESS t_prcs_discovered_vector_0;
 -- SW[9]
 t_prcs_SW_9: PROCESS
 BEGIN
@@ -113,6 +128,10 @@ END PROCESS t_prcs_SW_5;
 t_prcs_SW_4: PROCESS
 BEGIN
 	SW(4) <= '0';
+	WAIT FOR 30000 ps;
+	SW(4) <= '1';
+	WAIT FOR 60000 ps;
+	SW(4) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_4;
 -- SW[3]
@@ -131,10 +150,6 @@ END PROCESS t_prcs_SW_2;
 t_prcs_SW_1: PROCESS
 BEGIN
 	SW(1) <= '0';
-	WAIT FOR 10000 ps;
-	SW(1) <= '1';
-	WAIT FOR 70000 ps;
-	SW(1) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_1;
 -- SW[0]
@@ -143,4 +158,4 @@ BEGIN
 	SW(0) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_0;
-END main_arch;
+END switches_arch;

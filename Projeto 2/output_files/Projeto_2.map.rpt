@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto_2
-Thu Sep 23 22:51:41 2021
+Fri Sep 24 00:33:39 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,11 +13,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "switches:sws"
+ 12. Port Connectivity Checks: "display:disps"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +47,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 23 22:51:41 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 24 00:33:38 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Projeto_2                                   ;
-; Top-level Entity Name              ; switches                                    ;
+; Top-level Entity Name              ; main                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 37                                          ;
-;     Total combinational functions  ; 27                                          ;
-;     Dedicated logic registers      ; 18                                          ;
-; Total registers                    ; 18                                          ;
-; Total pins                         ; 20                                          ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 55                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; switches           ; Projeto_2          ;
+; Top-level entity name                                            ; main               ; Projeto_2          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,53 +158,56 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------+---------+
-; switches.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------+---------+
+; display_result.vhd               ; yes             ; User VHDL File        ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/display_result.vhd ;         ;
+; main.vhd                         ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd           ;         ;
+; display.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/display.vhd        ;         ;
+; disp7seg.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/disp7seg.vhd       ;         ;
+; switches.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd       ;         ;
+; lives.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/lives.vhd          ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 37          ;
-;                                             ;             ;
-; Total combinational functions               ; 27          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 16          ;
-;     -- 3 input functions                    ; 3           ;
-;     -- <=2 input functions                  ; 8           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 27          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 18          ;
-;     -- Dedicated logic registers            ; 18          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 20          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 18          ;
-; Total fan-out                               ; 150         ;
-; Average fan-out                             ; 1.76        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+;                                             ;          ;
+; Total combinational functions               ; 0        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 0        ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 0        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 55       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 55       ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,9 +215,35 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |switches                  ; 27 (27)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |switches           ; switches    ; work         ;
+; |main                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 55   ; 0            ; |main               ; main        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++------------------------------------------+---------------------------------------------+
+; Register name                            ; Reason for Removal                          ;
++------------------------------------------+---------------------------------------------+
+; switches:sws|last_SW[0..9]               ; Stuck at GND due to stuck port clock_enable ;
+; switches:sws|discovered                  ; Stuck at GND due to stuck port clock_enable ;
+; switches:sws|out_dig[1,2]                ; Stuck at GND due to stuck port clock_enable ;
+; switches:sws|new_discovered_vector[0]    ; Stuck at GND due to stuck port clock_enable ;
+; switches:sws|out_dig[0]                  ; Stuck at GND due to stuck port clock_enable ;
+; switches:sws|new_discovered_vector[1..3] ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 18   ;                                             ;
++------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                             ;
++-------------------------+--------------------------------+------------------------------------------------------------------------------+
+; Register name           ; Reason for Removal             ; Registers Removed due to This Register                                       ;
++-------------------------+--------------------------------+------------------------------------------------------------------------------+
+; switches:sws|last_SW[9] ; Stuck at GND                   ; switches:sws|discovered, switches:sws|out_dig[2], switches:sws|out_dig[1],   ;
+;                         ; due to stuck port clock_enable ; switches:sws|new_discovered_vector[0], switches:sws|out_dig[0],              ;
+;                         ;                                ; switches:sws|new_discovered_vector[2], switches:sws|new_discovered_vector[1] ;
++-------------------------+--------------------------------+------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -219,7 +251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 18    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -229,13 +261,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 11:1               ; 3 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |switches|digit[2]         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------+
+; Port Connectivity Checks: "switches:sws"         ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; secret[7..6]   ; Input ; Info     ; Stuck at VCC ;
+; secret[13..11] ; Input ; Info     ; Stuck at GND ;
+; secret[9..8]   ; Input ; Info     ; Stuck at GND ;
+; secret[3..2]   ; Input ; Info     ; Stuck at GND ;
+; secret[10]     ; Input ; Info     ; Stuck at VCC ;
+; secret[5]      ; Input ; Info     ; Stuck at GND ;
+; secret[4]      ; Input ; Info     ; Stuck at VCC ;
+; secret[1]      ; Input ; Info     ; Stuck at VCC ;
+; secret[0]      ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "display:disps"                 ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; secret_password[7..6]   ; Input ; Info     ; Stuck at VCC ;
+; secret_password[13..11] ; Input ; Info     ; Stuck at GND ;
+; secret_password[9..8]   ; Input ; Info     ; Stuck at GND ;
+; secret_password[3..2]   ; Input ; Info     ; Stuck at GND ;
+; secret_password[10]     ; Input ; Info     ; Stuck at VCC ;
+; secret_password[5]      ; Input ; Info     ; Stuck at GND ;
+; secret_password[4]      ; Input ; Info     ; Stuck at VCC ;
+; secret_password[1]      ; Input ; Info     ; Stuck at VCC ;
+; secret_password[0]      ; Input ; Info     ; Stuck at GND ;
++-------------------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -243,17 +300,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 20                          ;
-; cycloneiii_ff         ; 18                          ;
-;     plain             ; 18                          ;
-; cycloneiii_lcell_comb ; 27                          ;
-;     normal            ; 27                          ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 16                          ;
+; boundary_port         ; 55                          ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.77                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,7 +325,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 23 22:51:33 2021
+    Info: Processing started: Fri Sep 24 00:33:28 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto_2 -c Projeto_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -283,25 +336,97 @@ Info (12021): Found 2 design units, including 1 entities, in source file display
 Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
     Info (12022): Found design unit 1: test-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/test.vhd Line: 11
     Info (12023): Found entity 1: test File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/test.vhd Line: 4
+Warning (12125): Using design file main.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: main-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 16
+    Info (12023): Found entity 1: main File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 7
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (12125): Using design file display.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: display-arch_dec File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/display.vhd Line: 13
+    Info (12023): Found entity 1: display File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/display.vhd Line: 6
+Info (12128): Elaborating entity "display" for hierarchy "display:disps" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 58
+Warning (12125): Using design file disp7seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: disp7seg-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/disp7seg.vhd Line: 13
+    Info (12023): Found entity 1: disp7seg File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/disp7seg.vhd Line: 6
+Info (12128): Elaborating entity "disp7seg" for hierarchy "display:disps|disp7seg:disp1" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/display.vhd Line: 22
 Warning (12125): Using design file switches.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: switches-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 19
     Info (12023): Found entity 1: switches File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 6
-Info (12127): Elaborating entity "switches" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at switches.vhd(20): used explicit default value for signal "secret" because signal was never assigned a value File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 20
-Warning (10540): VHDL Signal Declaration warning at switches.vhd(21): used explicit default value for signal "remaining_lives" because signal was never assigned a value File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at switches.vhd(23): object "output_rl" assigned a value but never read File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at switches.vhd(41): signal "remaining_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 41
-Info (286030): Timing-Driven Synthesis is running
+Info (12128): Elaborating entity "switches" for hierarchy "switches:sws" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 59
+Warning (10541): VHDL Signal Declaration warning at switches.vhd(13): used implicit default value for signal "output_remaining_lives" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 13
+Warning (10036): Verilog HDL or VHDL warning at switches.vhd(20): object "output_rl" assigned a value but never read File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at switches.vhd(37): signal "remaining_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/switches.vhd Line: 37
+Warning (12125): Using design file lives.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lives-hardware File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/lives.vhd Line: 12
+    Info (12023): Found entity 1: lives File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/lives.vhd Line: 6
+Info (12128): Elaborating entity "lives" for hierarchy "lives:lvs" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 60
+Info (12128): Elaborating entity "display_result" for hierarchy "display_result:disp_result" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at display_result.vhd(21): signal "discovered_vector" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/display_result.vhd Line: 21
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 9
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 10
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 10
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 10
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 10
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 10
+    Warning (13410): Pin "OUT_DISC[0]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 12
+    Warning (13410): Pin "OUT_DISC[1]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 12
+    Warning (13410): Pin "OUT_DISC[2]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 12
+    Warning (13410): Pin "OUT_DISC[3]" is stuck at GND File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 12
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 37 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Thu Sep 23 22:51:42 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/lucas/OneDrive/Documentos/GitHub/SD/Projeto 2/main.vhd Line: 11
+Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 44 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Fri Sep 24 00:33:39 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:18
 
 

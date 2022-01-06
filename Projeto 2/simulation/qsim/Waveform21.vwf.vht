@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/23/2021 17:30:32"
+-- Generated on "09/24/2021 00:09:14"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          switches
 -- 
@@ -35,24 +35,16 @@ ARCHITECTURE switches_arch OF switches_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clock : STD_LOGIC;
-SIGNAL current_number : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL current_step : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL output_current_step : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL output_disc : STD_LOGIC;
 SIGNAL output_discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL output_remaining_lives : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL remaining_lives : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 COMPONENT switches
 	PORT (
 	clock : IN STD_LOGIC;
-	current_number : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	current_step : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 	discovered_vector : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	output_current_step : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	output_disc : OUT STD_LOGIC;
 	output_discovered_vector : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	output_remaining_lives : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-	remaining_lives : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
@@ -61,13 +53,9 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	clock => clock,
-	current_number => current_number,
-	current_step => current_step,
 	discovered_vector => discovered_vector,
-	output_current_step => output_current_step,
+	output_disc => output_disc,
 	output_discovered_vector => output_discovered_vector,
-	output_remaining_lives => output_remaining_lives,
-	remaining_lives => remaining_lives,
 	SW => SW
 	);
 
@@ -76,62 +64,12 @@ t_prcs_clock: PROCESS
 BEGIN
 LOOP
 	clock <= '0';
-	WAIT FOR 5000 ps;
+	WAIT FOR 10000 ps;
 	clock <= '1';
-	WAIT FOR 5000 ps;
+	WAIT FOR 10000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clock;
--- current_number[3]
-t_prcs_current_number_3: PROCESS
-BEGIN
-	current_number(3) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_3;
--- current_number[2]
-t_prcs_current_number_2: PROCESS
-BEGIN
-	current_number(2) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_2;
--- current_number[1]
-t_prcs_current_number_1: PROCESS
-BEGIN
-	current_number(1) <= '0';
-	WAIT FOR 50000 ps;
-	current_number(1) <= '1';
-	WAIT FOR 130000 ps;
-	current_number(1) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_1;
--- current_number[0]
-t_prcs_current_number_0: PROCESS
-BEGIN
-	current_number(0) <= '0';
-WAIT;
-END PROCESS t_prcs_current_number_0;
--- current_step[2]
-t_prcs_current_step_2: PROCESS
-BEGIN
-	current_step(2) <= '0';
-WAIT;
-END PROCESS t_prcs_current_step_2;
--- current_step[1]
-t_prcs_current_step_1: PROCESS
-BEGIN
-	current_step(1) <= '0';
-WAIT;
-END PROCESS t_prcs_current_step_1;
--- current_step[0]
-t_prcs_current_step_0: PROCESS
-BEGIN
-	current_step(0) <= '0';
-	WAIT FOR 50000 ps;
-	current_step(0) <= '1';
-	WAIT FOR 130000 ps;
-	current_step(0) <= '0';
-WAIT;
-END PROCESS t_prcs_current_step_0;
 -- discovered_vector[3]
 t_prcs_discovered_vector_3: PROCESS
 BEGIN
@@ -156,24 +94,6 @@ BEGIN
 	discovered_vector(0) <= '0';
 WAIT;
 END PROCESS t_prcs_discovered_vector_0;
--- remaining_lives[2]
-t_prcs_remaining_lives_2: PROCESS
-BEGIN
-	remaining_lives(2) <= '1';
-WAIT;
-END PROCESS t_prcs_remaining_lives_2;
--- remaining_lives[1]
-t_prcs_remaining_lives_1: PROCESS
-BEGIN
-	remaining_lives(1) <= '0';
-WAIT;
-END PROCESS t_prcs_remaining_lives_1;
--- remaining_lives[0]
-t_prcs_remaining_lives_0: PROCESS
-BEGIN
-	remaining_lives(0) <= '1';
-WAIT;
-END PROCESS t_prcs_remaining_lives_0;
 -- SW[9]
 t_prcs_SW_9: PROCESS
 BEGIN
@@ -208,6 +128,10 @@ END PROCESS t_prcs_SW_5;
 t_prcs_SW_4: PROCESS
 BEGIN
 	SW(4) <= '0';
+	WAIT FOR 50000 ps;
+	SW(4) <= '1';
+	WAIT FOR 100000 ps;
+	SW(4) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_4;
 -- SW[3]
@@ -219,7 +143,7 @@ END PROCESS t_prcs_SW_3;
 -- SW[2]
 t_prcs_SW_2: PROCESS
 BEGIN
-	SW(2) <= '1';
+	SW(2) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_2;
 -- SW[1]

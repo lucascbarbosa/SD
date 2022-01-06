@@ -5,28 +5,24 @@ USE ieee.std_logic_unsigned.ALL;
 
 ENTITY switches IS PORT (
 	clock : IN STD_LOGIC;
-	--secret : IN INTEGER RANGE 0 TO 9999;
-	--remaining_lives : IN INTEGER RANGE 0 TO 5;
+	secret : IN INTEGER RANGE 0 TO 9999;
+	remaining_lives : IN INTEGER RANGE 0 TO 5;
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 	discovered_vector: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	-- output_remaining_lives : OUT INTEGER RANGE 0 TO 5;
-	output_disc : OUT STD_LOGIC;
-	output_discovered_vector : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
-	--out_digit : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
+	digit : IN INTEGER RANGE 0 TO 4;
+	output_remaining_lives : OUT INTEGER RANGE 0 TO 5;
+	output_discovered_vector : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+	out_digit : OUT INTEGER RANGE 0 TO 4
 );
 END switches;
 
 ARCHITECTURE hardware OF switches IS
-	SIGNAL secret : INTEGER RANGE 0 TO 9999 := 1234;
-	SIGNAL remaining_lives : INTEGER RANGE 0 TO 5 := 5;
-	
 	SIGNAL output_rl : INTEGER RANGE 0 TO 5 := remaining_lives;
 	SIGNAL current_number : INTEGER RANGE 0 TO 9;
 	SIGNAL discovered : STD_LOGIC := '0';
 	SIGNAL last_SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 	SIGNAL new_discovered_vector : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
-	SIGNAL digit : INTEGER RANGE 0 TO 4 := 0;
-
+	SIGNAL out_dig : INTEGER RANGE 0 TO 4;
 BEGIN
 	PROCESS (clock,secret,current_number,discovered,last_SW,SW,digit)
 		BEGIN
@@ -47,7 +43,7 @@ BEGIN
 				IF (SW = 2 ** 0) THEN
 					IF (current_number = 0) THEN
 						discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 						output_rl <= remaining_lives - 1;
 					END IF;
@@ -56,7 +52,7 @@ BEGIN
 				IF (SW = 2 ** 1) THEN
 					IF (current_number = 1) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -65,7 +61,7 @@ BEGIN
 				 IF (SW = 2 ** 2) THEN
 					IF (current_number = 2) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -74,7 +70,7 @@ BEGIN
 				 IF (SW = 2 ** 3) THEN
 					IF (current_number = 3) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -83,7 +79,7 @@ BEGIN
 				 IF (SW = 2 ** 4) THEN
 					IF (current_number = 4) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -92,7 +88,7 @@ BEGIN
 				 IF (SW = 2 ** 5) THEN
 					IF (current_number = 5) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -101,7 +97,7 @@ BEGIN
 				 IF (SW = 2 ** 6) THEN
 					IF (current_number = 6) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -110,7 +106,7 @@ BEGIN
 				 IF (SW = 2 ** 7) THEN
 					IF (current_number = 7) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -119,7 +115,7 @@ BEGIN
 				 IF (SW = 2 ** 8) THEN
 					IF (current_number = 8) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
@@ -128,12 +124,12 @@ BEGIN
 				 IF (SW = 2 ** 9) THEN
 					IF (current_number = 9) THEN
 					  discovered <= '1';
-						digit <= digit + 1;
+						out_dig <= digit + 1;
 					ELSE
 					  output_rl <= remaining_lives - 1;
 					END IF;
 				 END IF;
-				 
+				 out_dig <= digit + 1;
 				END IF;
 				IF (discovered = '1') THEN
 					CASE digit IS
@@ -147,9 +143,8 @@ BEGIN
 			END IF;
 		 END IF;
   END PROCESS;
-	output_disc <= discovered;
 	--output_remaining_lives <= output_rl;
 	output_discovered_vector <= new_discovered_vector or discovered_vector;
-	--out_digit <= std_logic_vector(to_unsigned(digit,4));
+	out_digit <= out_dig;
 
 END hardware;
